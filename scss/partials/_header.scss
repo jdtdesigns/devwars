@@ -1,0 +1,118 @@
+header {
+  background: #222;
+  width: 200px;
+  height: 100vh;
+  position: fixed;
+  z-index: 500;
+  left: 0;
+  top: 0;
+  padding: 15px 0; 
+  .logo {
+    transform: skewX(-10deg) scale(1, 0.95);
+    color: #fff;     
+    span {
+      color: #69e200;
+    }
+  }
+  nav.main {
+    width: 100%; 
+    #log {
+      margin-top: 20px;
+      font-family: 'Lato', sans-serif;
+      background: #1e82ed;
+      padding: 30px 0 33px;
+      width: 100%;
+      letter-spacing: .065em;
+      transition: background .2s;
+      color: #fff;
+      position: relative;
+      overflow: hidden; 
+      &:after, &:before {
+        content: '';
+        position: absolute;
+        background: #fff;
+        left: 0;
+        width: 0;
+        height: 1px;
+        opacity: .4; 
+      }
+      &:after {
+        transition: width .2s;
+        top: 68px; 
+      }
+      &:before {
+        transition: width .2s .25s;
+        top: 76px; 
+      }
+      &:hover {
+        background: #3287ff; 
+        &:after {
+          width: 40%; 
+        }
+        &:before {
+          width: 35%;
+        }
+        span.lines:after {
+          width: 45%; 
+        }
+        span.lines:before {
+          width: 50%; 
+        }
+      }
+      span.lines {
+        display: inline-block;
+        opacity: .4; 
+        &:after, &:before {
+          content: '';
+          position: absolute;
+          background: #fff;
+          left: -40px;
+          width: 0;
+          height: 1px;
+          transform: skewX(0) scale(1);
+        }
+        &:after {
+          transition: width .2s .4s;
+          top: 18px; 
+        }
+        &:before {
+          transition: width .2s .3s;
+          top: 25px; 
+        }
+      }
+      span.text {
+        transform: scale(1, 1.03) skewX(-13deg);
+        display: inline-block;
+        font-size: 1.63em;
+        font-weight: 400;
+      }
+    }
+    a {
+      width: 100%;
+      text-transform: uppercase;
+      transition: background .3s;
+      .fa, span {
+        padding: 25px 0;
+        color: #aaa; 
+      }
+      .fa {
+        width: 25%;
+        text-align: center;
+        font-size: 1.4em; 
+      }
+      span {
+        width: 75%;
+        padding-left: 4px; 
+      }
+      &.active, &:hover {
+        .fa, .span {
+          color: #fff; 
+        }
+      }
+      &.active {
+        background: #323232; 
+      }
+    }
+  }
+}
+  

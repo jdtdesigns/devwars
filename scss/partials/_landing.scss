@@ -1,0 +1,20 @@
+.landing {
+  height: 85vh;
+  padding: 0 150px 0 300px;
+  background: url(../img/code.jpg) no-repeat;
+  background-size: cover;
+  background-position: top center;
+  position: relative;
+  z-index: 1;
+  h1 {
+    color: $green;
+    font-size: 3.6em;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+  }
+  h3 {
+    color: #fff;
+    font-weight: 100;
+    font-size: 2em;
+  }
+}

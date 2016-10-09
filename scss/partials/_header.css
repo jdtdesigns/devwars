@@ -1,0 +1,93 @@
+header {
+  background: #222;
+  width: 200px;
+  height: 100vh;
+  position: fixed;
+  z-index: 500;
+  left: 0;
+  top: 0;
+  padding: 15px 0; }
+  header .logo {
+    transform: skewX(-10deg) scale(1, 0.95);
+    color: #fff; }
+    header .logo span {
+      color: #69e200; }
+  header nav.main {
+    width: 100%; }
+    header nav.main #log {
+      margin-top: 20px;
+      font-family: 'Lato', sans-serif;
+      background: #1e82ed;
+      padding: 30px 0 33px;
+      width: 100%;
+      letter-spacing: .065em;
+      transition: background .2s;
+      color: #fff;
+      position: relative;
+      overflow: hidden; }
+      header nav.main #log:after, header nav.main #log:before {
+        content: '';
+        position: absolute;
+        background: #fff;
+        left: 0;
+        width: 0;
+        height: 1px;
+        opacity: .4; }
+      header nav.main #log:after {
+        transition: width .2s;
+        top: 68px; }
+      header nav.main #log:before {
+        transition: width .2s .25s;
+        top: 76px; }
+      header nav.main #log:hover {
+        background: #3287ff; }
+        header nav.main #log:hover:after {
+          width: 40%; }
+        header nav.main #log:hover:before {
+          width: 35%; }
+        header nav.main #log:hover span.lines:after {
+          width: 45%; }
+        header nav.main #log:hover span.lines:before {
+          width: 50%; }
+      header nav.main #log span.lines {
+        display: inline-block;
+        opacity: .4; }
+        header nav.main #log span.lines:after, header nav.main #log span.lines:before {
+          content: '';
+          position: absolute;
+          background: #fff;
+          left: -40px;
+          width: 0;
+          height: 1px;
+          transform: skewX(0) scale(1); }
+        header nav.main #log span.lines:after {
+          transition: width .2s .4s;
+          top: 18px; }
+        header nav.main #log span.lines:before {
+          transition: width .2s .3s;
+          top: 25px; }
+      header nav.main #log span.text {
+        transform: scale(1, 1.03) skewX(-13deg);
+        display: inline-block;
+        font-size: 1.63em;
+        font-weight: 400; }
+    header nav.main a {
+      width: 100%;
+      text-transform: uppercase;
+      transition: background .3s; }
+      header nav.main a .fa, header nav.main a span {
+        padding: 25px 0;
+        color: #aaa; }
+      header nav.main a .fa {
+        width: 25%;
+        text-align: center;
+        font-size: 1.4em; }
+      header nav.main a span {
+        width: 75%;
+        padding-left: 4px; }
+      header nav.main a.active .fa, header nav.main a.active .span, header nav.main a:hover .fa, header nav.main a:hover .span {
+        color: #fff; }
+      header nav.main a.active {
+        background: #323232; }
+
+/*# sourceMappingURL=_header.css.map */
