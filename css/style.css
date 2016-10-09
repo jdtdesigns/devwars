@@ -156,7 +156,7 @@ header {
       header nav.main a span {
         width: 75%;
         padding-left: 4px; }
-      header nav.main a.active .fa, header nav.main a.active span, header nav.main a:hover .fa, header nav.main a:hover span {
+      header nav.main a.active .fa, header nav.main a.active .span, header nav.main a:hover .fa, header nav.main a:hover .span {
         color: #fff; }
       header nav.main a.active {
         background: #323232; }
@@ -178,5 +178,17 @@ header {
     color: #fff;
     font-weight: 100;
     font-size: 2em; }
+
+/* login/signup card by @sorinr */
+.card {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  border-radius: 3px;
+  color: rgba(0, 0, 0, 0.87);
+  background: #fff;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12); }
+  .card .signup-card {
+    margin: 160px 0 40px; }
 
 /*# sourceMappingURL=style.css.map */
