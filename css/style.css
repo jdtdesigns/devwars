@@ -1,4 +1,3 @@
-@import "https://fonts.googleapis.com/css?family=Lato:300,400,700";
 * {
   margin: 0;
   padding: 0;
@@ -89,7 +88,7 @@ header {
     header nav.main #log {
       margin-top: 20px;
       font-family: 'Lato', sans-serif;
-      background: #468fe2;
+      background: #1e82ed;
       padding: 30px 0 33px;
       width: 100%;
       letter-spacing: .065em;
@@ -112,7 +111,7 @@ header {
         transition: width .2s .25s;
         top: 76px; }
       header nav.main #log:hover {
-        background: #2c88d3; }
+        background: #3287ff; }
         header nav.main #log:hover:after {
           width: 40%; }
         header nav.main #log:hover:before {
@@ -144,9 +143,23 @@ header {
         font-size: 1.63em;
         font-weight: 400; }
     header nav.main a {
-      background: #333;
       width: 100%;
-      text-align: center; }
+      text-transform: uppercase;
+      transition: background .3s; }
+      header nav.main a .fa, header nav.main a span {
+        padding: 25px 0;
+        color: #aaa; }
+      header nav.main a .fa {
+        width: 25%;
+        text-align: center;
+        font-size: 1.4em; }
+      header nav.main a span {
+        width: 75%;
+        padding-left: 4px; }
+      header nav.main a.active .fa, header nav.main a.active span, header nav.main a:hover .fa, header nav.main a:hover span {
+        color: #fff; }
+      header nav.main a.active {
+        background: #323232; }
 
 .landing {
   height: 85vh;
