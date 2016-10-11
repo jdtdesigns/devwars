@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dev>Wars</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<style>
+/* login/signup page by @sorinr */
+.overlay {
+    height: 100%;
+    width: 100%;
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+.overlay-content {
+  position: relative;
+  top: 10%;
+  width: 100%;
+  margin-top: 30px;
+}
+.overlay a{
+  text-decoration: none;
+}
+.closebtn{
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px; 
+    color: #69e200;
+}
+.closebtn:hover {
+  color: #3f8700;
+}
+.login-title{
+  color: #69e200;
+  font-size: 3.6em;
+  text-align: center;
+} 
+.form-content{
+  display: table;
+  margin: 0 auto;
+  width: 40%;
+}
+.login-input{
+  font-size: 2em;
+  color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+}
+.login-input label{
+  min-width: 350px;
+  font-size: 1em;
+  color: #818181;
+}
+.login-input input{
+  border-style: none;
+  background: transparent;
+  font-size: 1em;
+  color: #3f8700;
+  margin-left: 20px;
+  border-bottom: 1px solid;
+}
+.login-input input:focus{
+  outline: none;
+}
+#form-login{
+  padding: 10px;
+  margin: 10px 0px 20px 10px;
+  background-color: #69e200;
+  color: #ffffff;
+}
+#form-login:hover {
+  background-color: #3f8700;
+}
+#form-register{
+  padding: 10px;
+  margin: 10px 0px 20px 10px;
+  background-color: #818181;
+  color: #ffffff;
+}
+.form-action{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 2em;
+}
+.form-action a {
+  min-width: 200px;
+  text-align: center;
+}
+.hidden{
+  display: none;
+}
+</style>
+<body>
+
+
+
+ <!--login/register full screen overlay version by @sorinr-->
+<div id="login" class="overlay">
+  <!-- close button for our form -->
+  <a href="javascript:void(0)" class="closebtn" onclick="closeLogin()">&times;</a>
+  <div class="overlay-content">
+    <h1 class="login-title">Login</h1>
+    <div class="form-content">
+      <div class="login-input hidden">
+        <label for="username">Username:</label>
+        <input type="text" id="username" />
+      </div>
+      <div class="login-input">
+        <label for="email">Email:</label>
+        <input type="email" id="email" />
+      </div>
+      <div class="login-input">
+        <label for="password">Password:</label>
+        <input type="password" id="password" />
+      </div>
+      <div class="login-input hidden">
+        <label for="password-confirmation">Password Confirmation:</label>
+        <input type="password" id="password-confirmation" />
+      </div>
+      <div class="form-action">
+        <a href="javascript:void(0)" id="form-login">Login</a>
+        <a href="javascript:void(0)" id="form-register">Register</a>
+      </div>
+    </div>
+  </div>
+</div>
+ <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+  $("#form-register").on("click", function(){
+    $(".login-input").removeClass("hidden");
+    $(".login-title").text("Register");
+  });
+</script>
+</body>
+
+</html>

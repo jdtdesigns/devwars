@@ -21,9 +21,6 @@ input {
   outline: none;
   border: none; }
 
-ul {
-  list-style: none; }
-
 .row,
 .column {
   display: flex; }
@@ -41,7 +38,7 @@ ul {
   justify-content: space-between; }
 
 .content {
-  padding-left: 210px; }
+  padding-left: 200px; }
 
 .hide {
   display: none; }
@@ -58,42 +55,9 @@ ul {
 
 .logo {
   transform: skewX(-10deg) scaleY(0.95);
-  color: #fff;
-  font-size: 1.6em;
-  padding: 7px 0; }
+  color: #fff; }
   .logo span {
     color: #69e200; }
-
-header.top-bar {
-  background: #444;
-  color: #fff;
-  padding: 7px 25px 10px;
-  border-bottom: 1px solid #222; }
-  header.top-bar h3 {
-    font-size: 1.3em; }
-  header.top-bar nav.filter {
-    position: relative;
-    margin-left: 15px; }
-    header.top-bar nav.filter .current {
-      padding: 1px 13px 2px;
-      border: 2px solid #fff;
-      border-radius: 2px;
-      margin-top: 5px;
-      cursor: pointer; }
-      header.top-bar nav.filter .current span {
-        display: inline-block;
-        line-height: 1; }
-      header.top-bar nav.filter .current .current-text {
-        font-size: 1.1em;
-        margin-right: 19px; }
-      header.top-bar nav.filter .current .arrow {
-        color: #fff;
-        transform: rotate(90deg);
-        font-size: 1.6em;
-        line-height: .9;
-        padding-top: 2px; }
-    header.top-bar nav.filter ul {
-      position: absolute; }
 
 @keyframes fadeIn {
   from {
@@ -323,3 +287,5 @@ header.top-bar {
         animation: fadeIn .8s .2s infinite; }
       .landing .down-button span:last-child {
         animation: fadeIn .8s .3s infinite; }
+
+/*# sourceMappingURL=style.css.map */

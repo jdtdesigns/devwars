@@ -1,13 +1,80 @@
-/* login/signup card by @sorinr */
-  .card{
-    display: inline-block;
-    position: relative;
+.login {
+  position: fixed;
+  top: 16%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 502;
+  background: #2a2a2a;
+  width: 400px;
+  border-radius: 2px;
+  padding-bottom: 35px;
+  .create-text, #login-title {
+    color: #fff;
+    font-weight: 400;
+    font-size: 1.7em;
+    background: #3c3c3c;
     width: 100%;
-    border-radius: 3px;
-    color: rgba(0,0,0, 0.87);
-    background: #fff;
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-    & .signup-card{
-      margin: 160px 0 40px;
+    text-align: center;
+    padding: 22px 0 24px;
+    margin-bottom: 20px;
+    .text-wrap {
+      display: inline-block;
+      transform: skewX(-10deg) scaleY(0.95);
     }
   }
+  #login-title {
+    .text-wrap {
+      .green {
+        color: $green;
+      }
+    }
+  }
+  #error {
+    color: #f2482e;
+    margin-top: -15px;
+    padding-bottom: 7px;
+    &:before {
+      content: '\2217';
+      font-size: 1.3em;
+    }
+  }
+  input {
+    padding: 10px;
+    font-size: 1.2em;
+    width: 300px;
+    margin-bottom: 15px;
+    border-radius: 1px;
+  }
+  #login-submit {
+    padding: 13px 0;
+    width: 300px;
+    margin-top: 10px;
+    font-size: 1.1em;
+    font-weight: 300;
+    text-transform: uppercase;
+    background: $green;
+    transition: background .2s;
+    border-radius: 1px;
+    &:hover {
+      background: darken($green, 2%);
+    }
+    &:active {
+      background: darken($green, 4%);
+    }
+  }
+  .bottom {
+    margin-top: 10px;
+    color: #fff;
+    span {
+      margin: 0 2px;
+    }
+    #register, #forgot {
+      cursor: pointer;
+      transition: color .2s;
+      &:hover {
+        color: #eee;
+      }
+    }
+  }
+}

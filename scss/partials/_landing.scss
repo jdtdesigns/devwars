@@ -1,6 +1,5 @@
 .landing {
   height: 85vh;
-  padding: 0 150px 0 300px;
   background: url(../img/code.jpg) no-repeat;
   background-size: cover;
   background-position: top center;
@@ -17,4 +16,40 @@
     font-weight: 100;
     font-size: 2em;
   }
+  .down-button {
+    position: absolute;
+    bottom: -45px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    z-index: 50;
+    background: rgba(30, 30, 30, .5);
+    width: 45px;
+    height: 80px;
+    border: 2px solid #999;
+    border-radius: 30px;
+    padding-top: 5px;
+    cursor: pointer;
+    transition: background .2s;
+    &:hover {
+      background: rgba(50, 50, 50, .6);
+    }
+    span {
+      color: #999;
+      transform: rotate(-90deg);
+      font-size: 1.9em;
+      display: inline-block;
+      line-height: .6;
+      margin: 3px 3px 0 0;
+      &:first-child {
+        animation: fadeIn .8s infinite;
+      }
+      &:nth-child(2) {
+        animation: fadeIn .8s .2s infinite;
+      }
+      &:last-child {
+        animation: fadeIn .8s .3s infinite;
+      }
+  }
+}
 }

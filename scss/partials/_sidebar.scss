@@ -1,21 +1,15 @@
-header {
+.sidebar {
   background: #222;
-  width: 200px;
+  width: 210px;
   height: 100vh;
   position: fixed;
   z-index: 500;
   left: 0;
   top: 0;
   padding: 15px 0; 
-  .logo {
-    transform: skewX(-10deg) scale(1, 0.95);
-    color: #fff;     
-    span {
-      color: #69e200;
-    }
-  }
   nav.main {
-    width: 100%; 
+    width: 100%;
+    // Login/Register button
     #log {
       margin-top: 20px;
       font-family: 'Lato', sans-serif;
@@ -59,6 +53,7 @@ header {
           width: 50%; 
         }
       }
+      // Animated Lines
       span.lines {
         display: inline-block;
         opacity: .4; 
@@ -69,7 +64,6 @@ header {
           left: -40px;
           width: 0;
           height: 1px;
-          transform: skewX(0) scale(1);
         }
         &:after {
           transition: width .2s .4s;
@@ -81,19 +75,22 @@ header {
         }
       }
       span.text {
-        transform: scale(1, 1.03) skewX(-13deg);
+        transform: scaleY(1.03) skewX(-13deg);
         display: inline-block;
         font-size: 1.63em;
         font-weight: 400;
       }
     }
+    // Menu Links
     a {
       width: 100%;
       text-transform: uppercase;
       transition: background .3s;
+      padding-left: 5px;
       .fa, span {
-        padding: 25px 0;
+        padding: 23px 0;
         color: #aaa; 
+        transition: color .2s;
       }
       .fa {
         width: 25%;
@@ -102,15 +99,51 @@ header {
       }
       span {
         width: 75%;
-        padding-left: 4px; 
+        padding-left: 4px;
       }
       &.active, &:hover {
-        .fa, .span {
+        .fa, span {
           color: #fff; 
         }
       }
       &.active {
         background: #323232; 
+      }
+    }
+  }
+  .footer {
+    .message, .donate {
+      width: 170px;
+      text-transform: uppercase;
+      border-radius: 1px;
+      cursor: pointer;
+      transition: background .2s;
+    }
+    .message {
+      background: darken($green, 5%);
+      &:hover {
+        background: darken($green, 7%);
+      }
+      .fa, a {
+        color: #222;
+      }
+      .fa {
+        font-size: 1.13em;
+        margin-right: 10px;
+      }
+      a {
+        padding: 15px 0;
+        font-size: .9em;
+      }
+    }
+    .donate {
+      background: #333;
+      padding: 13px 0;
+      text-align: center;
+      color: #aaa;
+      margin-top: 10px;
+      &:hover {
+        background: #373737;
       }
     }
   }
