@@ -21,7 +21,7 @@
     margin-bottom: 20px;
     .text-wrap {
       display: inline-block;
-      transform: skewX(-10deg) scaleY(0.95);
+      transform: $skew;
     }
   }
   #login-title {

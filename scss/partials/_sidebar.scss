@@ -75,7 +75,7 @@
         }
       }
       span.text {
-        transform: scaleY(1.03) skewX(-13deg);
+        transform: $skew;
         display: inline-block;
         font-size: 1.63em;
         font-weight: 400;

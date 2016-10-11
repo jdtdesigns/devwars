@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACI,oBAAY;EACR,UAAU,EAAE,KAAK;EACjB,OAAO,EAAE,aAAa;EACtB,MAAM,EAAE,aAAa;EACrB,aAAa,EAAE,GAAG",
+"sources": ["_tournaments.scss"],
+"names": [],
+"file": "_tournaments.css"
+}

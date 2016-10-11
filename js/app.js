@@ -2,8 +2,8 @@
 
 var app = (function() {
   var init = function() {
+    topbar.setup();
     $('#sidebar').load('inc/sidebar.html', function() {
-      topbar.setup();
       sidebar.setup() 
       $('#login-modal').load('inc/login-modal.html', function() { modal.setup() });
     });

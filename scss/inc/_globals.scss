@@ -21,7 +21,10 @@
 }
 
 .content {
-  padding-left: 210px;
+  padding: 80px 0 0 210px;
+  &.no-bar {
+    padding: 0 0 0 210px;
+  }
 }
 
 .remove {
@@ -48,7 +51,7 @@ body.light {
   top: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, .4);
+  background: rgba(0, 0, 0, .5);
   z-index: 501;
   transition: opacity .3s, visibility .3s;
 }
@@ -70,6 +73,11 @@ header.top-bar {
   color: #fff;
   padding: 7px 25px 10px;
   border-bottom: 1px solid #222;
+  position: fixed;
+  left: 0;
+  padding-left: 230px;
+  z-index: 300;
+  width: 100%;
   h3 {
     font-size: 1.3em;
   }

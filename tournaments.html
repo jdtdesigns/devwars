@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>DevWars__ - Tournaments</title>
@@ -7,36 +8,101 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body class="light">
-  
+
   <div class="overlay remove"></div>
-  
+
   <div id="login-modal"></div>
-  
+
   <div id="sidebar" data-page="tournaments.html"></div>
+
+  <header class="top-bar row y-center split">
+      <div class="row y-center">
+        <h3>Tournaments</h3>
+        <nav class="filter">
+          <div class="current row y-center x-center">
+            <span class="current-text">All</span>
+            <span class="arrow">&#8250;</span>
+          </div>
+          <ul class="column">
+            <li class="active">All</li>
+            <li>Live</li>
+            <li>Upcoming</li>
+            <li>Finished</li>
+          </ul>
+        </nav>
+      </div>
+      <a href="create.html" class="create-btn">Create Tournament</a>
+    </header>
   
   <div class="content">
-
-    <header class="top-bar row y-center">
-      <h3>Tournaments</h3>
-      <nav class="filter">
-        <div class="current row y-center x-center">
-          <span class="current-text">All</span>
-          <span class="arrow">&#8250;</span>
+    <div id="live" class="listing-wrap column">
+      <h2 class="header-text">Live</h2>
+      <div class="live column" style="background-image: url(https://hd.unsplash.com/photo-1461749280684-dccba630e2f6);">
+        <a href="#" class="fa fa-external-link"></a>
+        <span class="indicator"></span>
+        <div class="bg-overlay"></div>
+        <div class="info column split">
+          <h2 class="title">Build a Web App</h1>
+          <div class="about-wrap column x-center">
+            <div class="row about">
+              <h4 class="type">3 vs 3</h4>
+              <span class="stack">HTML/CSS/JS</span>
+            </div>
+            <span class="started">Started: 29 minutes ago</span>
+          </div>
         </div>
-        <ul class="column">
-          <li class="active">All</li>
-          <li>Upcoming</li>
-          <li>Started</li>
-          <li>Finished</li>
-        </ul>
-      </nav>
-    </header>
-
+        <button class="details">View Details</button>
+      </div>
+    </div>
+    
+    <div id="upcoming" class="listing-wrap column">
+      <div class="listings row x-center">
+        <!--<div class="listing column y-center">-->
+        <!--  <h3 class="title">Build a Web App</h3>-->
+        <!--  <div class="row">-->
+        <!--    <h4 class="type">3 vs 3</h4>-->
+        <!--    <span class="stack">HTML/CSS/JS</span>-->
+        <!--  </div>-->
+        <!--  <span class="time">November 12th, 2016</span>-->
+        <!--  <button class="details">See Details</button>-->
+        <!--</div>-->
+        <!--<div class="listing column y-center">-->
+        <!--  <h3 class="title">Build a Web App</h3>-->
+        <!--  <div class="row">-->
+        <!--    <h4 class="type">3 vs 3</h4>-->
+        <!--    <span class="stack">HTML/CSS/JS</span>-->
+        <!--  </div>-->
+        <!--  <span class="time">November 12th, 2016</span>-->
+        <!--  <button class="details">See Details</button>-->
+        <!--</div>-->
+        <!--<div class="listing column y-center">-->
+        <!--  <h3 class="title">Build a Web App</h3>-->
+        <!--  <div class="row">-->
+        <!--    <h4 class="type">3 vs 3</h4>-->
+        <!--    <span class="stack">HTML/CSS/JS</span>-->
+        <!--  </div>-->
+        <!--  <span class="time">November 12th, 2016</span>-->
+        <!--  <button class="details">See Details</button>-->
+        <!--</div>-->
+        <!--<div class="listing column y-center">-->
+        <!--  <h3 class="title">Build a Web App</h3>-->
+        <!--  <div class="row">-->
+        <!--    <h4 class="type">3 vs 3</h4>-->
+        <!--    <span class="stack">HTML/CSS/JS</span>-->
+        <!--  </div>-->
+        <!--  <span class="time">November 12th, 2016</span>-->
+        <!--  <button class="details">See Details</button>-->
+        <!--</div>-->
+      </div>
+    </div>
+    
   </div>
-  
+
   <script src="https://code.jquery.com/jquery-latest.min.js"></script>
   <script src="js/fb.js"></script>
   <script src="js/app.js"></script>
 </body>
+
 </html>
