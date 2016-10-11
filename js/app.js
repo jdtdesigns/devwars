@@ -2,13 +2,8 @@
 
 var app = (function() {
   var init = function() {
-    loadIncludes();
-  };
-  
-  var loadIncludes = function() {
-    $('#top-bar').load('inc/top-bar.html', function() { topbar.setup() });
-    
-    $('#sidebar').load('inc/sidebar.html', function() { 
+    $('#sidebar').load('inc/sidebar.html', function() {
+      topbar.setup();
       sidebar.setup() 
       $('#login-modal').load('inc/login-modal.html', function() { modal.setup() });
     });
@@ -85,6 +80,8 @@ var app = (function() {
     },
     setType: function() {
       var type = $(this).text(), btn = $('.top-bar').find('.current-text');
+      
+      $(this).addClass('active').siblings().removeClass('active');
       btn.text(type);
     }
   };
