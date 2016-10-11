@@ -2,16 +2,69 @@
 
 var app = (function() {
   var init = function() {
-    sidebar.setup();
-    topbar.setup();
+    loadIncludes();
+  };
+  
+  var loadIncludes = function() {
+    $('#top-bar').load('inc/top-bar.html', function() { topbar.setup() });
+    
+    $('#sidebar').load('inc/sidebar.html', function() { 
+      sidebar.setup() 
+      $('#login-modal').load('inc/login-modal.html', function() { modal.setup() });
+    });
   };
   
   var sidebar = {
+    page: $('#sidebar').attr('data-page'),
     setup: function() {
+      var link = $('.sidebar').find('a[href="' + sidebar.page + '"]');
+      
+      link.addClass('active');
+      
       $('.sidebar').find('a').on('click', sidebar.linkHandler);
     },
     linkHandler: function(e) {
       if ( $(this).hasClass('active') ) e.preventDefault();
+    }
+  };
+  
+  var modal = {
+    login: true,
+    setup: function() {
+      $('#log').on('click', modal.show);
+      
+      // Hide modal when user clicks outside of the modal
+      $('body').on('click', modal.hide);
+      
+      // Keep modal from closing when clicking inside
+      $('.login').on('click', function(e) { e.stopPropagation() });
+      
+      $('#register').on('click', modal.switchState);
+    },
+    show: function(e) {
+      e.stopPropagation();
+      $('.login, .overlay').removeClass('remove');
+    },
+    
+    hide: function() {
+      $('.login, .overlay').addClass('remove');
+      $('#username, #email, #password, #password-confirm').val('');
+    },
+    switchState: function() {
+      if (modal.login) { // Show Registration
+        $('#login-title').addClass('hide');
+        $('.create-text, #username, #password-confirm').removeClass('hide');
+        $('#register').text('Login');
+        $('#login-submit').text('Register');
+        modal.login = false;
+      }
+      else { // Show Login
+        $('#login-title').removeClass('hide');
+        $('.create-text, #username, #password-confirm').addClass('hide');
+        $('#register').text('Register New Account');
+        $('#login-submit').text('Log In');
+        modal.login = true;
+      }
     }
   };
   
