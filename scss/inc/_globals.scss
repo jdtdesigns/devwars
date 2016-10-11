@@ -24,6 +24,18 @@
   padding-left: 210px;
 }
 
+.remove {
+  opacity: 0;
+  visibility: hidden;
+}
+
+body.light {
+  background: #ddd;
+  .sidebar nav.main a.active {
+    background: #3a3a3a;
+  }
+}
+
 .hide {
   display: none;
 }
@@ -37,6 +49,7 @@
   height: 100%;
   background: rgba(0, 0, 0, .4);
   z-index: 501;
+  transition: opacity .3s, visibility .3s;
 }
 
 .logo {
@@ -62,7 +75,8 @@ header.top-bar {
     position: relative;
     margin-left: 15px;
     .current {
-      padding: 1px 13px 2px;
+      padding: 2px 0 3px 5px;
+      width: 127px;
       border: 2px solid #fff;
       border-radius: 2px;
       margin-top: 5px;
@@ -74,17 +88,52 @@ header.top-bar {
       .current-text {
         font-size: 1.1em;
         margin-right: 19px;
+        width: 85%;
+        text-align: center;
+        &.fade-in {
+          animation: fadeIn .3s;
+        }
       }
       .arrow {
         color: #fff;
         transform: rotate(90deg);
+        width: 15%;
         font-size: 1.6em;
         line-height: .9;
         padding-top: 2px;
+        position: relative;
+        top: 4px;
+        right: 5px;
+        &.up {
+          transform: rotate(-90deg);
+          position: relative;
+          left: -12px;
+          top: -3px;
+        }
       }
     }
     ul {
       position: absolute;
+      top: 38px;
+      left: 0;
+      background: rgba(80, 80, 80, .9);
+      transition: max-height .2s;
+      width: 127px;
+      max-height: 0;
+      overflow: hidden;
+      &.show {
+        max-height: 145px;
+      }
+      li {
+        padding: 8px 10px;
+        cursor: pointer;
+        &.active, &:hover {
+          background: rgba(140, 140, 140, .7);
+        }
+        &:not(:last-child) {
+          border-bottom: 1px solid rgba(0, 0, 0, .2);
+        }
+      }
     }
   }
 }

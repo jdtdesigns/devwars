@@ -9,6 +9,7 @@
   width: 400px;
   border-radius: 2px;
   padding-bottom: 35px;
+  transition: opacity .3s, visibility .3s;
   .create-text, #login-title {
     color: #fff;
     font-weight: 400;

@@ -20,10 +20,11 @@ var Firebase = (function() {
     },
     show: function(e) {
       e.stopPropagation();
-      $('.login, .overlay').removeClass('hide');
+      $('.login, .overlay').removeClass('remove');
     },
+    
     hide: function() {
-      $('.login, .overlay').addClass('hide');
+      $('.login, .overlay').addClass('remove');
       $('#username, #email, #password, #password-confirm').val('');
     },
     switchState: function() {
