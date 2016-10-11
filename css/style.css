@@ -121,15 +121,16 @@ header.top-bar {
           top: -3px; }
     header.top-bar nav.filter ul {
       position: absolute;
-      top: 38px;
+      top: 40px;
       left: 0;
       background: rgba(80, 80, 80, 0.9);
-      transition: max-height .2s;
+      transition: max-height .18s;
       width: 127px;
       max-height: 0;
       overflow: hidden; }
       header.top-bar nav.filter ul.show {
-        max-height: 145px; }
+        max-height: 145px;
+        transition: max-height .2s; }
       header.top-bar nav.filter ul li {
         padding: 8px 10px;
         cursor: pointer; }

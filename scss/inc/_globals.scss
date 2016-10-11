@@ -29,6 +29,7 @@
   visibility: hidden;
 }
 
+// Lighter background for body
 body.light {
   background: #ddd;
   .sidebar nav.main a.active {
@@ -63,6 +64,7 @@ body.light {
   }
 }
 
+// Top Bar
 header.top-bar {
   background: #444;
   color: #fff;
@@ -114,15 +116,16 @@ header.top-bar {
     }
     ul {
       position: absolute;
-      top: 38px;
+      top: 40px;
       left: 0;
       background: rgba(80, 80, 80, .9);
-      transition: max-height .2s;
+      transition: max-height .18s;
       width: 127px;
       max-height: 0;
       overflow: hidden;
       &.show {
         max-height: 145px;
+        transition: max-height .2s;
       }
       li {
         padding: 8px 10px;
