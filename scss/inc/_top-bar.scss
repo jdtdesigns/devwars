@@ -5,6 +5,7 @@ header.top-bar {
   border-bottom: 1px solid #222;
   position: fixed;
   left: 0;
+  top: 0;
   padding-left: 230px;
   z-index: 300;
   width: 100%;
@@ -56,7 +57,7 @@ header.top-bar {
       position: absolute;
       top: 40px;
       left: 0;
-      background: rgba(80, 80, 80, .9);
+      background: rgba(90, 90, 90, .9);
       transition: max-height .18s;
       width: 127px;
       max-height: 0;

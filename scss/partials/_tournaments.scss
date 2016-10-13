@@ -1,10 +1,10 @@
 .top-bar {
   .create-btn {
     background: $blue;
-    padding: 6px 15px 10px;
-    margin: 0 15px -3px 0;
-    border-radius: 1px;
-    font-size: 1.1em;
+    padding: 6px 15px 8px;
+    margin: 0 15px -5px 0;
+    border-radius: 2px;
+    font-size: .95em;
     transition: background .2s;
     &:hover {
       background: darken($blue, 2.5%);
@@ -13,8 +13,119 @@
 }
 
 .listing-wrap {
-  width: 90%;
   margin: 0 auto 35px;
+  .header-text {
+    font-weight: 300;
+    margin-bottom: 15px;
+    background: lighten(#cecece, 2%);
+    padding: 2px 0 5px 25px;
+    font-size: 1.2em;
+    color: #777;
+  }
+  .details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    background: rgba(200, 200, 200, .8);
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px 0 25px 210px;
+    border-radius: 1px;
+    .info {
+      color: #fff;
+      width: 400px;
+      background: #555;
+      padding: 35px 0 25px;
+      .title {
+        color: #fff;
+        text-align: center;
+        font-size: 1.7em;
+        font-weight: 300;
+        transform: $skew;
+        margin-bottom: 25px;
+        padding: 0 25px;
+      }
+      .about {
+        background: #444;
+        padding: 15px 25px 35px;
+        .category {
+          margin-bottom: 10px;
+          text-align: center;
+          font-weight: 300;
+          font-size: 1.3em;
+          color: #eee;
+        }
+        .when, .type {
+          font-size: 1.2em;
+          font-weight: 300;
+        }
+        .when {
+          margin-bottom: 5px;
+          .date {
+            font-size: .9em;
+          }
+        }
+        .type {
+          .players {
+            font-size: .88em;
+          }
+          .stack {
+            color: $green;
+            font-size: .89em;
+          }
+        }
+      }
+    }
+    .notes {
+      background: #5e5e5e;
+      padding-bottom: 20px;
+      h2 {
+        text-align: center;
+        font-weight: 300;
+        font-size: 1.4em;
+        margin-bottom: 15px;
+        background: #4b4b4b;
+        padding: 13px 0;
+        &.header-obj {
+          color: lighten($blue, 15%);
+        }
+        &.header-rules {
+          color: lighten(#e0502c, 10%);
+        }
+      }
+      .objectives, .rules {
+        padding: 0 15px;
+        li {
+          margin-bottom: 10px;
+          color: #dedede;
+          position: relative;
+          padding: 0 15px 0 35px;
+          line-height: 1.5;
+          &:before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 8px;
+            width: 8px;
+            height: 8px;
+          }
+        }
+      }
+      .objectives {
+        margin-bottom: 20px;
+        li:before {
+          background: darken($blue, 3%);
+        }
+      }
+      .rules {
+        padding-bottom: 30px;
+        li:before {
+          background: #e0502c;
+        }
+      }
+    }
+  }
   .listings {
     .listing {
       color: #fff;
@@ -26,30 +137,52 @@
 
 .live {
   height: 260px;
-  width: 60%;
+  width: 700px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  margin: 0 auto;
+  margin: 40px auto 0;
   position: relative;
   color: #fff;
-  .fa, .indicator {
+  .live-header {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    z-index: 13;
+    padding: 10px 25px 14px;
+    width: 100%;
+    text-transform: uppercase;
+    font-size: .9em;
+    font-weight: 300;
+    color: #ccc;
+  }
+  .view-now,
+  .indicator {
     content: '';
     position: absolute;
     z-index: 15;
   }
-  .fa {
+  .view-now {
+    top: 45px;
     color: #fff;
-    font-size: 2em;
-    top: 35px;
+    font-size: .8em;
     left: 40px;
+    background: darken($green, 6%);
+    padding: 4px 10px 5px;
+    border-radius: 1px;
+    .fa {
+      margin-right: 6px;
+    }
+    &:hover {
+      background: darken($green, 7%);
+    }
   }
   .indicator {
-    top: 30px;
     right: 40px;
+    top: 25px;
     background: $green;
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
     display: inline-block;
   }
@@ -71,19 +204,19 @@
     .title {
       color: #fff;
       margin-bottom: 35px;
-      font-size: 2.4em;
+      font-size: 2em;
       font-weight: 400;
       text-align: center;
       transform: $skew;
     }
     .about-wrap {
-      background: rgba(0, 0, 0, .7);
+      background: rgba(40, 40, 40, .7);
       padding: 8px 0 10px 25px;
       .about {
         margin-bottom: 5px;
         font-size: 1.1em;
-        .type {
-          margin-right: 30px;
+        .type, .category {
+          margin-right: 15px;
         }
         .stack {
           color: $green;
@@ -91,7 +224,7 @@
       }
     }
   }
-  button.details {
+  button.details-btn {
     position: absolute;
     bottom: 15px;
     right: 25px;
@@ -107,4 +240,3 @@
     }
   }
 }
-

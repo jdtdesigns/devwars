@@ -43,8 +43,11 @@ ul {
 .split {
   justify-content: space-between; }
 
+.bottom {
+  align-items: flex-end; }
+
 .content {
-  padding: 80px 0 0 210px; }
+  padding: 100px 0 0 210px; }
   .content.no-bar {
     padding: 0 0 0 210px; }
 
@@ -86,6 +89,7 @@ header.top-bar {
   border-bottom: 1px solid #222;
   position: fixed;
   left: 0;
+  top: 0;
   padding-left: 230px;
   z-index: 300;
   width: 100%; }
@@ -130,74 +134,7 @@ header.top-bar {
       position: absolute;
       top: 40px;
       left: 0;
-      background: rgba(80, 80, 80, 0.9);
-      transition: max-height .18s;
-      width: 127px;
-      max-height: 0;
-      overflow: hidden; }
-      header.top-bar nav.filter ul.show {
-        max-height: 145px;
-        transition: max-height .2s; }
-      header.top-bar nav.filter ul li {
-        padding: 8px 10px;
-        cursor: pointer; }
-        header.top-bar nav.filter ul li.active, header.top-bar nav.filter ul li:hover {
-          background: rgba(140, 140, 140, 0.7); }
-        header.top-bar nav.filter ul li:not(:last-child) {
-          border-bottom: 1px solid rgba(0, 0, 0, 0.2); }
-
-header.top-bar {
-  background: #444;
-  color: #fff;
-  padding: 7px 25px 10px;
-  border-bottom: 1px solid #222;
-  position: fixed;
-  left: 0;
-  padding-left: 230px;
-  z-index: 300;
-  width: 100%; }
-  header.top-bar h3 {
-    font-size: 1.3em; }
-  header.top-bar nav.filter {
-    position: relative;
-    margin-left: 15px; }
-    header.top-bar nav.filter .current {
-      padding: 2px 0 3px 5px;
-      width: 127px;
-      border: 2px solid #fff;
-      border-radius: 2px;
-      margin-top: 5px;
-      cursor: pointer; }
-      header.top-bar nav.filter .current span {
-        display: inline-block;
-        line-height: 1; }
-      header.top-bar nav.filter .current .current-text {
-        font-size: 1.1em;
-        margin-right: 19px;
-        width: 85%;
-        text-align: center; }
-        header.top-bar nav.filter .current .current-text.fade-in {
-          animation: fadeIn .3s; }
-      header.top-bar nav.filter .current .arrow {
-        color: #fff;
-        transform: rotate(90deg);
-        width: 15%;
-        font-size: 1.6em;
-        line-height: .9;
-        padding-top: 2px;
-        position: relative;
-        top: 4px;
-        right: 5px; }
-        header.top-bar nav.filter .current .arrow.up {
-          transform: rotate(-90deg);
-          position: relative;
-          left: -12px;
-          top: -3px; }
-    header.top-bar nav.filter ul {
-      position: absolute;
-      top: 40px;
-      left: 0;
-      background: rgba(80, 80, 80, 0.9);
+      background: rgba(90, 90, 90, 0.9);
       transition: max-height .18s;
       width: 127px;
       max-height: 0;
@@ -342,7 +279,7 @@ header.top-bar {
 .login {
   position: fixed;
   top: 16%;
-  left: 0;
+  left: 40px;
   right: 0;
   margin: 0 auto;
   z-index: 502;
@@ -452,17 +389,104 @@ header.top-bar {
 
 .top-bar .create-btn {
   background: #1e82ed;
-  padding: 6px 15px 10px;
-  margin: 0 15px -3px 0;
-  border-radius: 1px;
-  font-size: 1.1em;
+  padding: 6px 15px 8px;
+  margin: 0 15px -5px 0;
+  border-radius: 2px;
+  font-size: .95em;
   transition: background .2s; }
   .top-bar .create-btn:hover {
     background: #137beb; }
 
 .listing-wrap {
-  width: 90%;
   margin: 0 auto 35px; }
+  .listing-wrap .header-text {
+    font-weight: 300;
+    margin-bottom: 15px;
+    background: lightgray;
+    padding: 2px 0 5px 25px;
+    font-size: 1.2em;
+    color: #777; }
+  .listing-wrap .details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    background: rgba(200, 200, 200, 0.8);
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px 0 25px 210px;
+    border-radius: 1px; }
+    .listing-wrap .details .info {
+      color: #fff;
+      width: 400px;
+      background: #555;
+      padding: 35px 0 25px; }
+      .listing-wrap .details .info .title {
+        color: #fff;
+        text-align: center;
+        font-size: 1.7em;
+        font-weight: 300;
+        transform: scaleY(1.03) skewX(-13deg);
+        margin-bottom: 25px;
+        padding: 0 25px; }
+      .listing-wrap .details .info .about {
+        background: #444;
+        padding: 15px 25px 35px; }
+        .listing-wrap .details .info .about .category {
+          margin-bottom: 10px;
+          text-align: center;
+          font-weight: 300;
+          font-size: 1.3em;
+          color: #eee; }
+        .listing-wrap .details .info .about .when, .listing-wrap .details .info .about .type {
+          font-size: 1.2em;
+          font-weight: 300; }
+        .listing-wrap .details .info .about .when {
+          margin-bottom: 5px; }
+          .listing-wrap .details .info .about .when .date {
+            font-size: .9em; }
+        .listing-wrap .details .info .about .type .players {
+          font-size: .88em; }
+        .listing-wrap .details .info .about .type .stack {
+          color: #69e200;
+          font-size: .89em; }
+    .listing-wrap .details .notes {
+      background: #5e5e5e;
+      padding-bottom: 20px; }
+      .listing-wrap .details .notes h2 {
+        text-align: center;
+        font-weight: 300;
+        font-size: 1.4em;
+        margin-bottom: 15px;
+        background: #4b4b4b;
+        padding: 13px 0; }
+        .listing-wrap .details .notes h2.header-obj {
+          color: #65a9f3; }
+        .listing-wrap .details .notes h2.header-rules {
+          color: #e77558; }
+      .listing-wrap .details .notes .objectives, .listing-wrap .details .notes .rules {
+        padding: 0 15px; }
+        .listing-wrap .details .notes .objectives li, .listing-wrap .details .notes .rules li {
+          margin-bottom: 10px;
+          color: #dedede;
+          position: relative;
+          padding: 0 15px 0 35px;
+          line-height: 1.5; }
+          .listing-wrap .details .notes .objectives li:before, .listing-wrap .details .notes .rules li:before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 8px;
+            width: 8px;
+            height: 8px; }
+      .listing-wrap .details .notes .objectives {
+        margin-bottom: 20px; }
+        .listing-wrap .details .notes .objectives li:before {
+          background: #137ae9; }
+      .listing-wrap .details .notes .rules {
+        padding-bottom: 30px; }
+        .listing-wrap .details .notes .rules li:before {
+          background: #e0502c; }
   .listing-wrap .listings .listing {
     color: #fff;
     padding: 25px;
@@ -470,28 +494,47 @@ header.top-bar {
 
 .live {
   height: 260px;
-  width: 60%;
+  width: 700px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  margin: 0 auto;
+  margin: 40px auto 0;
   position: relative;
   color: #fff; }
-  .live .fa, .live .indicator {
+  .live .live-header {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    z-index: 13;
+    padding: 10px 25px 14px;
+    width: 100%;
+    text-transform: uppercase;
+    font-size: .9em;
+    font-weight: 300;
+    color: #ccc; }
+  .live .view-now,
+  .live .indicator {
     content: '';
     position: absolute;
     z-index: 15; }
-  .live .fa {
+  .live .view-now {
+    top: 45px;
     color: #fff;
-    font-size: 2em;
-    top: 35px;
-    left: 40px; }
+    font-size: .8em;
+    left: 40px;
+    background: #5bc300;
+    padding: 4px 10px 5px;
+    border-radius: 1px; }
+    .live .view-now .fa {
+      margin-right: 6px; }
+    .live .view-now:hover {
+      background: #58be00; }
   .live .indicator {
-    top: 30px;
     right: 40px;
+    top: 25px;
     background: #69e200;
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
     display: inline-block; }
   .live .bg-overlay {
@@ -511,21 +554,21 @@ header.top-bar {
     .live .info .title {
       color: #fff;
       margin-bottom: 35px;
-      font-size: 2.4em;
+      font-size: 2em;
       font-weight: 400;
       text-align: center;
       transform: scaleY(1.03) skewX(-13deg); }
     .live .info .about-wrap {
-      background: rgba(0, 0, 0, 0.7);
+      background: rgba(40, 40, 40, 0.7);
       padding: 8px 0 10px 25px; }
       .live .info .about-wrap .about {
         margin-bottom: 5px;
         font-size: 1.1em; }
-        .live .info .about-wrap .about .type {
-          margin-right: 30px; }
+        .live .info .about-wrap .about .type, .live .info .about-wrap .about .category {
+          margin-right: 15px; }
         .live .info .about-wrap .about .stack {
           color: #69e200; }
-  .live button.details {
+  .live button.details-btn {
     position: absolute;
     bottom: 15px;
     right: 25px;
@@ -533,7 +576,7 @@ header.top-bar {
     background: #1e82ed;
     padding: 5px 15px;
     font-size: 1.025em; }
-    .live button.details:hover {
+    .live button.details-btn:hover {
       background: #137beb; }
-    .live button.details:active {
+    .live button.details-btn:active {
       background: #1278e4; }

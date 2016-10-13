@@ -1,5 +1,9 @@
 Name Ideas:
 
+Functionality Ideas:
+1. No show tags in profiles
+
+
 1. Code Arena
 
 Code Proposals:
@@ -9,8 +13,8 @@ To solve:
 1. Login/Registration JS validation rules (@sorinr i propose using data attributes) @JD good idea ;)
 
 Changes:
-1. Added to _gobals.scss->body.light entry two background tints. lines commented for the moment.plz try out
- 
+1. Made some changes to tournaments.html and _tornaments.scss for testing purposes
+
 
 In progress
 
