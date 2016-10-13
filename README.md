@@ -2,6 +2,7 @@ Name Ideas:
 
 Functionality Ideas:
 1. No show tags in profiles
+2. Add admin: false/true boolean to user in db rules. Then check on frontend for admin: true.
 
 
 1. Code Arena

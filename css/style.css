@@ -18,7 +18,8 @@ button {
   outline: none;
   border: none;
   color: #fff;
-  cursor: pointer; }
+  cursor: pointer;
+  font-family: 'Lato', sans-serif; }
 
 input {
   outline: none;
@@ -70,7 +71,7 @@ body.light {
   top: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   z-index: 501;
   transition: opacity .3s, visibility .3s; }
 
@@ -81,6 +82,9 @@ body.light {
   padding: 7px 0; }
   .logo span {
     color: #69e200; }
+
+.styles-shadow-light {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); }
 
 header.top-bar {
   background: #444;
@@ -134,7 +138,7 @@ header.top-bar {
       position: absolute;
       top: 40px;
       left: 0;
-      background: rgba(90, 90, 90, 0.9);
+      background: rgba(100, 100, 100, 0.98);
       transition: max-height .18s;
       width: 127px;
       max-height: 0;
@@ -278,7 +282,7 @@ header.top-bar {
 
 .login {
   position: fixed;
-  top: 16%;
+  top: 12.3%;
   left: 40px;
   right: 0;
   margin: 0 auto;
@@ -396,6 +400,8 @@ header.top-bar {
   transition: background .2s; }
   .top-bar .create-btn:hover {
     background: #137beb; }
+  .top-bar .create-btn:active {
+    background: #1275e0; }
 
 .listing-wrap {
   margin: 0 auto 35px; }
@@ -411,15 +417,27 @@ header.top-bar {
     top: 0;
     left: 0;
     z-index: 50;
-    background: rgba(200, 200, 200, 0.8);
+    background: rgba(150, 150, 150, 0.7);
     width: 100%;
     min-height: 100vh;
     padding: 100px 0 25px 210px;
     border-radius: 1px; }
+    .listing-wrap .details > div {
+      position: relative; }
+      .listing-wrap .details > div .admin-panel {
+        position: absolute;
+        top: 10px;
+        left: 15px; }
+        .listing-wrap .details > div .admin-panel .fa {
+          color: #fff;
+          font-size: 1.3em;
+          cursor: pointer; }
+          .listing-wrap .details > div .admin-panel .fa:hover {
+            color: #eee; }
     .listing-wrap .details .info {
       color: #fff;
       width: 400px;
-      background: #555;
+      background: #444;
       padding: 35px 0 25px; }
       .listing-wrap .details .info .title {
         color: #fff;
@@ -430,14 +448,15 @@ header.top-bar {
         margin-bottom: 25px;
         padding: 0 25px; }
       .listing-wrap .details .info .about {
-        background: #444;
-        padding: 15px 25px 35px; }
+        background: #333;
+        padding: 12px 25px 25px; }
         .listing-wrap .details .info .about .category {
           margin-bottom: 10px;
           text-align: center;
           font-weight: 300;
           font-size: 1.3em;
-          color: #eee; }
+          color: #cfcfcf;
+          transform: scaleY(0.95); }
         .listing-wrap .details .info .about .when, .listing-wrap .details .info .about .type {
           font-size: 1.2em;
           font-weight: 300; }
@@ -445,6 +464,8 @@ header.top-bar {
           margin-bottom: 5px; }
           .listing-wrap .details .info .about .when .date {
             font-size: .9em; }
+          .listing-wrap .details .info .about .when .time {
+            letter-spacing: .025em; }
         .listing-wrap .details .info .about .type .players {
           font-size: .88em; }
         .listing-wrap .details .info .about .type .stack {
@@ -458,12 +479,12 @@ header.top-bar {
         font-weight: 300;
         font-size: 1.4em;
         margin-bottom: 15px;
-        background: #4b4b4b;
+        background: #3b3b3b;
         padding: 13px 0; }
         .listing-wrap .details .notes h2.header-obj {
           color: #65a9f3; }
         .listing-wrap .details .notes h2.header-rules {
-          color: #e77558; }
+          color: #e36242; }
       .listing-wrap .details .notes .objectives, .listing-wrap .details .notes .rules {
         padding: 0 15px; }
         .listing-wrap .details .notes .objectives li, .listing-wrap .details .notes .rules li {
@@ -487,6 +508,46 @@ header.top-bar {
         padding-bottom: 30px; }
         .listing-wrap .details .notes .rules li:before {
           background: #e0502c; }
+    .listing-wrap .details button.register {
+      width: 200px;
+      background: #51af00;
+      font-size: 1.3em;
+      font-weight: 300;
+      padding: 12px 0 15px;
+      border-radius: 2px;
+      margin: 20px auto 0;
+      display: none; }
+      .listing-wrap .details button.register:hover {
+        background: #4da500; }
+      .listing-wrap .details button.register:active {
+        background: #489b00; }
+      .listing-wrap .details button.register.leave {
+        background: #d82b2b; }
+        .listing-wrap .details button.register.leave:hover {
+          background: #ce2626; }
+        .listing-wrap .details button.register.leave:active {
+          background: #c52424; }
+    .listing-wrap .details button.results {
+      width: 200px;
+      margin: 15px auto 0;
+      background: #555;
+      padding: 7px 0 10px;
+      font-size: 1.2em;
+      font-weight: 300; }
+      .listing-wrap .details button.results:hover {
+        background: #585858; }
+      .listing-wrap .details button.results:active {
+        background: #525252; }
+    .listing-wrap .details .joined-notice {
+      position: absolute;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 1.1em;
+      bottom: 0;
+      left: 0;
+      color: #f9ce31;
+      background: rgba(0, 0, 0, 0.2);
+      padding: 20px 25px 20px 20px; }
   .listing-wrap .listings .listing {
     color: #fff;
     padding: 25px;

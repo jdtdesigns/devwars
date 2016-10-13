@@ -9,6 +9,9 @@
     &:hover {
       background: darken($blue, 2.5%);
     }
+    &:active {
+      background: darken($blue, 5%);
+    }
   }
 }
 
@@ -27,15 +30,32 @@
     top: 0;
     left: 0;
     z-index: 50;
-    background: rgba(200, 200, 200, .8);
+    background: rgba(150, 150, 150, .7);
     width: 100%;
     min-height: 100vh;
     padding: 100px 0 25px 210px;
     border-radius: 1px;
+    // display: none;
+    & > div {
+      position: relative;
+      .admin-panel {
+        position: absolute;
+        top: 10px;
+        left: 15px;
+        .fa {
+          color: #fff;
+          font-size: 1.3em;
+          cursor: pointer;
+          &:hover {
+            color: #eee;
+          }
+        }
+      }
+    }
     .info {
       color: #fff;
       width: 400px;
-      background: #555;
+      background: #444;
       padding: 35px 0 25px;
       .title {
         color: #fff;
@@ -47,14 +67,15 @@
         padding: 0 25px;
       }
       .about {
-        background: #444;
-        padding: 15px 25px 35px;
+        background: #333;
+        padding: 12px 25px 25px;
         .category {
           margin-bottom: 10px;
           text-align: center;
           font-weight: 300;
           font-size: 1.3em;
-          color: #eee;
+          color: #cfcfcf;
+          transform: scaleY(.95);
         }
         .when, .type {
           font-size: 1.2em;
@@ -64,6 +85,9 @@
           margin-bottom: 5px;
           .date {
             font-size: .9em;
+          }
+          .time {
+            letter-spacing: .025em;
           }
         }
         .type {
@@ -85,13 +109,13 @@
         font-weight: 300;
         font-size: 1.4em;
         margin-bottom: 15px;
-        background: #4b4b4b;
+        background: #3b3b3b;
         padding: 13px 0;
         &.header-obj {
           color: lighten($blue, 15%);
         }
         &.header-rules {
-          color: lighten(#e0502c, 10%);
+          color: lighten(#e0502c, 5%);
         }
       }
       .objectives, .rules {
@@ -124,6 +148,56 @@
           background: #e0502c;
         }
       }
+    }
+    button.register {
+      width: 200px;
+      background: darken($green, 10%);
+      font-size: 1.3em;
+      font-weight: 300;
+      padding: 12px 0 15px;
+      border-radius: 2px;
+      margin: 20px auto 0;
+      display: none;
+      &:hover {
+        background: darken($green, 12%);
+      }
+      &:active {
+        background: darken($green, 14%);
+      }
+      &.leave {
+        background: $red;
+        &:hover {
+          background: darken($red, 3%);
+        } 
+        &:active {
+          background: darken($red, 5%);
+        }
+      }
+    }
+    button.results {
+      width: 200px;
+      margin: 15px auto 0;
+      background: #555;
+      padding: 7px 0 10px;
+      font-size: 1.2em;
+      font-weight: 300;
+      &:hover {
+        background: lighten(#555, 1%);
+      }
+      &:active {
+        background: darken(#555, 1%);
+      }
+    }
+    .joined-notice {
+      position: absolute;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 1.1em;
+      bottom: 0;
+      left: 0;
+      color: $orange;
+      background: rgba(0, 0, 0, .2);
+      padding: 20px 25px 20px 20px;
     }
   }
   .listings {
