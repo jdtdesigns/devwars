@@ -18,29 +18,29 @@
   <div id="sidebar" data-page="tournaments.html"></div>
 
   <header class="top-bar row y-center split">
-      <div class="row y-center">
-        <h3>Tournaments</h3>
-        <nav class="filter">
-          <div class="current row y-center x-center">
-            <span class="current-text">All</span>
-            <span class="arrow">&#8250;</span>
-          </div>
-          <ul class="column">
-            <li class="active">All</li>
-            <li>Live</li>
-            <li>Upcoming</li>
-            <li>Finished</li>
-          </ul>
-        </nav>
-      </div>
-      <button id="create-tournament" class="create-btn">Create Tournament</button> 
-      
-    </header>
-  
+    <div class="row y-center">
+      <h3>Tournaments</h3>
+      <nav class="filter">
+        <div class="current row y-center x-center">
+          <span class="current-text">All</span>
+          <span class="arrow">&#8250;</span>
+        </div>
+        <ul class="column">
+          <li class="active">All</li>
+          <li>Live</li>
+          <li>Upcoming</li>
+          <li>Finished</li>
+        </ul>
+      </nav>
+    </div>
+    <button id="create-tournament" class="create-btn">Create Tournament</button>
+
+  </header>
+
   <div class="content">
-    
+
     <div id="live" class="listing-wrap column">
-      
+
       <!-- Begin Details @JD -->
       <div class="details column y-center hide">
         <div class="styles-shadow-light row">
@@ -74,25 +74,25 @@
           <div class="notes column">
             <h2 class="header-obj">Objectives</h2>
             <ul class="objectives">
-             <li>Desktop/Mobile Nav Bar/Menu</li>
-             <li>Slider with at least 3 slides</li>
-             <li>3 column list of at least 9 dynamically generated products</li>
-             <li>At least one parallax effect</li>
-             <li>Footer with animated text</li>
-           </ul>
-           <h2 class="header-rules">Rules</h2>
+              <li>Desktop/Mobile Nav Bar/Menu</li>
+              <li>Slider with at least 3 slides</li>
+              <li>3 column list of at least 9 dynamically generated products</li>
+              <li>At least one parallax effect</li>
+              <li>Footer with animated text</li>
+            </ul>
+            <h2 class="header-rules">Rules</h2>
             <ul class="rules">
-             <li>Desktop/Mobile Nav Bar/Menu</li>
-             <li>Slider with at least 3 slides</li>
-             <li>3 column list of at least 9 dynamically generated products</li>
-             <li>At least one parallax effect</li>
-             <li>Footer with animated text</li>
-           </ul>      
+              <li>Desktop/Mobile Nav Bar/Menu</li>
+              <li>Slider with at least 3 slides</li>
+              <li>3 column list of at least 9 dynamically generated products</li>
+              <li>At least one parallax effect</li>
+              <li>Footer with animated text</li>
+            </ul>
           </div>
         </div>
       </div>
       <!-- End Details -->
-      
+
       <!-- Begin Results @JD-->
       <div class="results column y-center">
         <div class="wrap column">
@@ -103,52 +103,121 @@
               <div class="column">
                 <span class="category">Random Team Match</span>
                 <span class="date">January 12th, 2017</span>
-                
+
               </div>
               <div class="column">
                 <span class="players">Players: 6</span>
                 <span class="stack">HTML/CSS/JS</span>
               </div>
             </div>
+            <nav class="tabs column y-center">
+              <ul class="row x-center">
+                <li class="active">Overall</li>
+                <li>Objectives</li>
+                <li>Votes</li>
+              </ul>
+            </nav>
           </div>
-          <div class="objectives row">
+          <div class="results-display row">
             <div class="column y-center team-blue">
               <h2 class="header-blue">Blue Team<span class="win-text">Win</span></h2>
               <div class="list column">
-                <div class="head-wrap row x-center y-center">
-                  <h3 class="head-text">Objectives</h3>
-                  <span class="objective-amount">3</span>
+                <div class="overall-view column">
+                  <table class="overall-table">
+                    <thead>
+                      <tr>
+                        <th></th>
+                        <th class="border-right-none">Points</th>
+                      </tr>
+                    </thead>
+                    <tr>
+                      <th>Objectives</th>
+                      <td>4</td>
+                    </tr>
+                    <tr>
+                      <th>Design</th>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <th>Functionality</th>
+                      <td>0</td>
+                    </tr>
+                    <tr>
+                      <th class="total-text">Total</th>
+                      <td class="total-amount win"><span>5</span></td>
+                    </tr>
+                  </table>
                 </div>
-                <ul class="rules">
-                  <li class="active">Desktop/Mobile Nav Bar/Menu</li>
-                  <li class="active">Slider with at least 3 slides</li>
-                  <li>3 column list of at least 9 dynamically generated products</li>
-                  <li class="active">At least one parallax effect</li>
-                  <li class="active">Footer with animated text</li>
-                </ul>
-                </div>   
+                
+                <div class="objectives-view column hide">
+                  <div class="head-wrap row x-center y-center">
+                    <h3 class="head-text">Objectives</h3>
+                    <span class="objective-amount">5</span>
+                  </div>
+                  <ul class="rules">
+                    <li class="active">Desktop/Mobile Nav Bar/Menu</li>
+                    <li class="active">Slider with at least 3 slides</li>
+                    <li>3 column list of at least 9 dynamically generated products</li>
+                    <li class="active">At least one parallax effect</li>
+                    <li class="active">Footer with animated text</li>
+                  </ul>
+                </div>
+                
               </div>
+            </div>
             <div class="column y-center team-red">
               <h2 class="header-red">Red Team<span class="lose-text">Lose</span></h2>
-              <div class="list column"><div class="head-wrap row x-center y-center">
-                   <h3 class="head-text">Objectives</h3>
-                   <span class="objective-amount">3</span>
-                 </div>
-                 <ul class="rules">
-                  <li>Desktop/Mobile Nav Bar/Menu</li>
-                  <li class="active">Slider with at least 3 slides</li>
-                  <li class="active">3 column list of at least 9 dynamically generated products</li>
-                  <li class="active">At least one parallax effect</li>
-                  <li>Footer with animated text</li>
-                </ul> </div>  
+              <div class="list column">
+                
+                <div class="overall-view column">
+                  <table class="overall-table">
+                    <thead>
+                      <tr>
+                        <th></th>
+                        <th class="border-right-none">Points</th>
+                      </tr>
+                    </thead>
+                    <tr>
+                      <th>Objectives</th>
+                      <td>3</td>
+                    </tr>
+                    <tr>
+                      <th>Design</th>
+                      <td>0</td>
+                    </tr>
+                    <tr>
+                      <th>Functionality</th>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <th class="total-text">Total</th>
+                      <td class="total-amount lose"><span>4</span></td>
+                    </tr>
+                  </table>
+                </div>
+                
+                <div class="column objectives-view hide">
+                  <div class="head-wrap row x-center y-center">
+                    <h3 class="head-text">Objectives</h3>
+                    <span class="objective-amount">3</span>
+                  </div>
+                  <ul class="rules">
+                    <li>Desktop/Mobile Nav Bar/Menu</li>
+                    <li class="active">Slider with at least 3 slides</li>
+                    <li class="active">3 column list of at least 9 dynamically generated products</li>
+                    <li class="active">At least one parallax effect</li>
+                    <li>Footer with animated text</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      
+
       <!-- End Results-->
-      
-      
+
+
       <div class="live column" style="background-image: url(https://hd.unsplash.com/photo-1461749280684-dccba630e2f6);">
         <h2 class="live-header">Live Tournament</h2>
         <a href="#" class="view-now"><i class="fa fa-external-link"></i>View Now!</a>
@@ -156,36 +225,36 @@
         <div class="bg-overlay"></div>
         <div class="info column split">
           <h2 class="title">Build a Web App</h1>
-          <div class="about-wrap column x-center">
-            <div class="row about">
-              <span class="type">6 Players</span>
-              <span class="category">Team Match</span>
-              <span class="stack">HTML/CSS/JS</span>
+            <div class="about-wrap column x-center">
+              <div class="row about">
+                <span class="type">6 Players</span>
+                <span class="category">Team Match</span>
+                <span class="stack">HTML/CSS/JS</span>
+              </div>
+              <span class="started">Started: 29 minutes ago</span>
             </div>
-            <span class="started">Started: 29 minutes ago</span>
-          </div>
         </div>
         <button class="details-btn">View Details</button>
       </div>
     </div>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <div id="upcoming" class="listing-wrap column">
       <div class="listings row x-center">
         <!--<div class="listing column y-center">-->
@@ -226,7 +295,7 @@
         <!--</div>-->
       </div>
     </div>
-    
+
   </div>
 
   <script src="https://code.jquery.com/jquery-latest.min.js"></script>
