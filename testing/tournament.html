@@ -1,31 +1,228 @@
-<style type="text/css">
-    .toolbar a{
-      padding: 0 10px;
-      &:hover{
-        color:#1e82ed;
-      }
-    }
-    .details textarea{
-      width: 100%;
-      height: 200px;
-      overflow-y: auto;
-      color: #fff;
-      background: rgba(0,0,0,.4);
-      margin-left: 20px;
-      margin-right: 50px;
-    }
-</style>
+and<!doctype html>
+<html lang="en">
 
-<!--<div class="toolbar">-->
-<!--    <a href="#"><i class="fa fa-plus"></i></a>-->
-  <!--<a href="#"><i class="fa fa-edit"></i></a>-->
-  <!--<a href="#"><i class="fa fa-eye"></i></a>-->
-  <!--<a href="#"><i class="fa fa-save"></i></a>        -->
-<!--</div>-->
+<head>
+  <meta charset="UTF-8">
+  <title>DevWars__ - Tournaments</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
 
-<!-- If you're ever coding html and need nested stuff in a text element, this is bad practice.
-    Text should not have spaces at the beginning of or after.
--->
-<!--<h4 class="details-title">General rules-->
+<body class="light">
 
-<!--</h4>-->
+  <div class="overlay remove"></div>
+
+  <div id="login-modal"></div>
+
+  <div id="sidebar" data-page="tournaments.html"></div>
+
+  <header class="top-bar row y-center split">
+      <div class="row y-center">
+        <h3>Tournaments</h3>
+        <nav class="filter">
+          <div class="current row y-center x-center">
+            <span class="current-text">All</span>
+            <span class="arrow">&#8250;</span>
+          </div>
+          <ul class="column">
+            <li class="active">All</li>
+            <li>Live</li>
+            <li>Upcoming</li>
+            <li>Finished</li>
+          </ul>
+        </nav>
+      </div>
+      <button id="create-tournament" class="create-btn">Create Tournament</button> 
+      
+    </header>
+  
+  <div class="content">
+    
+    <div id="live" class="listing-wrap column">
+      
+      <!-- Begin Details @JD -->
+      <div class="details column y-center">
+        <div class="styles-shadow-light row">
+          <div class="admin-panel row">
+            <i class="fa fa-edit"></i>
+          </div>
+          <div class="info column">
+            <h2 class="title">Build a Web Application with Node/React</h2>
+            <div class="row x-center y-center stream-alert">
+              <h3>*Tournament is live!</h3>
+              <div class="view-details row y-center">
+                <i class="fa fa-external-link"></i>
+                <span>Watch Now!</span>
+              </div>
+            </div>
+            <div class="about column">
+              <h3 class="category">Random Ranked Match</h3>
+              <div class="when row split">
+                <span class="date">January 12th, 2017</span>
+                <span class="time">3:30PM</span>
+              </div>
+              <div class="type row split bottom">
+                <span class="players">Registered Players: 3</span>
+                <span class="stack">HTML/CSS/JS</span>
+              </div>
+            </div>
+            <button class="register leave">Leave Tournament</button>
+            <button class="results-btn hide">See Results</button>
+            <span class="joined-notice">You have joined this tournament!</span>
+          </div>
+          <div class="notes column">
+            <h2 class="header-obj">Objectives</h2>
+            <ul class="objectives">
+             <li>Desktop/Mobile Nav Bar/Menu</li>
+             <li>Slider with at least 3 slides</li>
+             <li>3 column list of at least 9 dynamically generated products</li>
+             <li>At least one parallax effect</li>
+             <li>Footer with animated text</li>
+           </ul>
+           <h2 class="header-rules">Rules</h2>
+            <ul class="rules">
+             <li>Desktop/Mobile Nav Bar/Menu</li>
+             <li>Slider with at least 3 slides</li>
+             <li>3 column list of at least 9 dynamically generated products</li>
+             <li>At least one parallax effect</li>
+             <li>Footer with animated text</li>
+           </ul>      
+          </div>
+        </div>
+      </div>
+      <!-- End Details -->
+      
+      <!-- Begin Results @JD-->
+      <div class="results column y-center hide">
+        <div class="wrap column">
+          <div class="header column">
+            <h2 class="title">Build a Web Application with Node/React</h2>
+            <h3 class="final-text">Final Results</h3>
+            <div class="about row y-center split">
+              <div class="column">
+                <span class="category">Random Ranked Match</span>
+                <span class="date">January 12th, 2017</span>
+              </div>
+              <div class="column">
+                <span class="players">Players: 6</span>
+                <span class="stack">HTML/CSS/JS</span>
+              </div>
+            </div>
+          </div>
+          <div class="objectives row">
+            <div class="column y-center team-one">
+              <h2 class="header-blue">Blue Team<span class="win-text">Win</span></h2>
+              <h3 class="head-text">Objectives</h3>
+              <ul class="rules">
+               <li class="active">Desktop/Mobile Nav Bar/Menu</li>
+               <li class="active">Slider with at least 3 slides</li>
+               <li>3 column list of at least 9 dynamically generated products</li>
+               <li class="active">At least one parallax effect</li>
+               <li class="active">Footer with animated text</li>
+             </ul>   
+            </div>
+            <div class="column y-center team-two">
+              <h2 class="header-red">Red Team<span class="lose-text">Lose</span></h2>
+              <h3 class="head-text">Objectives</h3>
+              <ul class="rules">
+               <li>Desktop/Mobile Nav Bar/Menu</li>
+               <li class="active">Slider with at least 3 slides</li>
+               <li class="active">3 column list of at least 9 dynamically generated products</li>
+               <li class="active">At least one parallax effect</li>
+               <li>Footer with animated text</li>
+             </ul>   
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- End Results-->
+      
+      
+      <div class="live column" style="background-image: url(https://hd.unsplash.com/photo-1461749280684-dccba630e2f6);">
+        <h2 class="live-header">Live Tournament</h2>
+        <a href="#" class="view-now"><i class="fa fa-external-link"></i>View Now!</a>
+        <span class="indicator"></span>
+        <div class="bg-overlay"></div>
+        <div class="info column split">
+          <h2 class="title">Build a Web App</h1>
+          <div class="about-wrap column x-center">
+            <div class="row about">
+              <span class="type">6 Players</span>
+              <span class="category">Team Match</span>
+              <span class="stack">HTML/CSS/JS</span>
+            </div>
+            <span class="started">Started: 29 minutes ago</span>
+          </div>
+        </div>
+        <button class="details-btn">View Details</button>
+      </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div id="upcoming" class="listing-wrap column">
+      <div class="listings row x-center">
+        <!--<div class="listing column y-center">-->
+        <!--  <h3 class="title">Build a Web App</h3>-->
+        <!--  <div class="row">-->
+        <!--    <h4 class="type">3 vs 3</h4>-->
+        <!--    <span class="stack">HTML/CSS/JS</span>-->
+        <!--  </div>-->
+        <!--  <span class="time">November 12th, 2016</span>-->
+        <!--  <button class="details">See Details</button>-->
+        <!--</div>-->
+        <!--<div class="listing column y-center">-->
+        <!--  <h3 class="title">Build a Web App</h3>-->
+        <!--  <div class="row">-->
+        <!--    <h4 class="type">3 vs 3</h4>-->
+        <!--    <span class="stack">HTML/CSS/JS</span>-->
+        <!--  </div>-->
+        <!--  <span class="time">November 12th, 2016</span>-->
+        <!--  <button class="details">See Details</button>-->
+        <!--</div>-->
+        <!--<div class="listing column y-center">-->
+        <!--  <h3 class="title">Build a Web App</h3>-->
+        <!--  <div class="row">-->
+        <!--    <h4 class="type">3 vs 3</h4>-->
+        <!--    <span class="stack">HTML/CSS/JS</span>-->
+        <!--  </div>-->
+        <!--  <span class="time">November 12th, 2016</span>-->
+        <!--  <button class="details">See Details</button>-->
+        <!--</div>-->
+        <!--<div class="listing column y-center">-->
+        <!--  <h3 class="title">Build a Web App</h3>-->
+        <!--  <div class="row">-->
+        <!--    <h4 class="type">3 vs 3</h4>-->
+        <!--    <span class="stack">HTML/CSS/JS</span>-->
+        <!--  </div>-->
+        <!--  <span class="time">November 12th, 2016</span>-->
+        <!--  <button class="details">See Details</button>-->
+        <!--</div>-->
+      </div>
+    </div>
+    
+  </div>
+
+  <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="js/fb.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>
