@@ -54,14 +54,14 @@
     font-size: 1.1em;
     font-weight: 300;
     text-transform: uppercase;
-    background: $green;
+    background: darken($green, 3%);
     transition: background .2s;
     border-radius: 1px;
     &:hover {
-      background: darken($green, 2%);
+      background: darken($green, 4%);
     }
     &:active {
-      background: darken($green, 4%);
+      background: darken($green, 6%);
     }
   }
   .bottom {

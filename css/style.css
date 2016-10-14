@@ -260,9 +260,9 @@ header.top-bar {
     cursor: pointer;
     transition: background .2s; }
   .sidebar .footer .message {
-    background: #5dc900; }
+    background: #58be00; }
     .sidebar .footer .message:hover {
-      background: #58be00; }
+      background: #54b400; }
     .sidebar .footer .message .fa, .sidebar .footer .message a {
       color: #222; }
     .sidebar .footer .message .fa {
@@ -305,7 +305,7 @@ header.top-bar {
       display: inline-block;
       transform: scaleY(1.03) skewX(-13deg); }
   .login #login-title .text-wrap .green {
-    color: #69e200; }
+    color: #64d800; }
   .login #error {
     color: #f2482e;
     margin-top: -15px;
@@ -326,13 +326,13 @@ header.top-bar {
     font-size: 1.1em;
     font-weight: 300;
     text-transform: uppercase;
-    background: #69e200;
+    background: #5dc900;
     transition: background .2s;
     border-radius: 1px; }
     .login #login-submit:hover {
-      background: #64d800; }
+      background: #5bc300; }
     .login #login-submit:active {
-      background: #60ce00; }
+      background: #56b900; }
   .login .bottom {
     margin-top: 10px;
     color: #fff; }
@@ -352,7 +352,7 @@ header.top-bar {
   position: relative;
   z-index: 1; }
   .landing h1 {
-    color: #69e200;
+    color: #64d800;
     font-size: 3.6em;
     text-transform: uppercase;
     margin-bottom: 25px; }
@@ -458,7 +458,7 @@ header.top-bar {
           font-weight: 300;
           margin-right: 20px; }
         .listing-wrap .details .info .stream-alert .view-details, .listing-wrap .results .info .stream-alert .view-details {
-          background: #54b400;
+          background: #4faa00;
           padding: 3px 8px 4px;
           border-radius: 2px;
           cursor: pointer;
@@ -467,9 +467,9 @@ header.top-bar {
             margin-right: 4px;
             font-size: .9em; }
           .listing-wrap .details .info .stream-alert .view-details:hover, .listing-wrap .results .info .stream-alert .view-details:hover {
-            background: #51af00; }
-          .listing-wrap .details .info .stream-alert .view-details:active, .listing-wrap .results .info .stream-alert .view-details:active {
             background: #4da500; }
+          .listing-wrap .details .info .stream-alert .view-details:active, .listing-wrap .results .info .stream-alert .view-details:active {
+            background: #489b00; }
       .listing-wrap .details .info .about, .listing-wrap .results .info .about {
         background: #333;
         padding: 12px 25px 25px; }
@@ -494,7 +494,7 @@ header.top-bar {
         .listing-wrap .details .info .about .type .players, .listing-wrap .results .info .about .type .players {
           font-size: .88em; }
         .listing-wrap .details .info .about .type .stack, .listing-wrap .results .info .about .type .stack {
-          color: #69e200;
+          color: #64d800;
           font-size: .89em; }
     .listing-wrap .details .notes, .listing-wrap .results .notes {
       background: #5e5e5e;
@@ -545,7 +545,7 @@ header.top-bar {
           border: 2px solid #ee471e; }
     .listing-wrap .details button.register, .listing-wrap .results button.register {
       width: 200px;
-      background: #459600;
+      background: #418b00;
       font-size: 1.3em;
       font-weight: 300;
       padding: 12px 0 15px;
@@ -553,9 +553,9 @@ header.top-bar {
       margin: 20px auto 0;
       transition: background .2s; }
       .listing-wrap .details button.register:hover, .listing-wrap .results button.register:hover {
-        background: #418b00; }
-      .listing-wrap .details button.register:active, .listing-wrap .results button.register:active {
         background: #3c8100; }
+      .listing-wrap .details button.register:active, .listing-wrap .results button.register:active {
+        background: #377700; }
       .listing-wrap .details button.register.leave, .listing-wrap .results button.register.leave {
         background: #e32711; }
         .listing-wrap .details button.register.leave:hover, .listing-wrap .results button.register.leave:hover {
@@ -625,7 +625,7 @@ header.top-bar {
         .listing-wrap .results .wrap .header .about .players {
           margin-bottom: 3px; }
         .listing-wrap .results .wrap .header .about .stack {
-          color: #69e200; }
+          color: #64d800; }
   .listing-wrap .results .objectives {
     padding: 10px 10px 30px; }
     .listing-wrap .results .objectives .team-one .header-red, .listing-wrap .results .objectives .team-one .header-blue, .listing-wrap .results .objectives .team-two .header-red, .listing-wrap .results .objectives .team-two .header-blue {
@@ -641,8 +641,8 @@ header.top-bar {
         margin-left: 15px;
         border-radius: 2px; }
       .listing-wrap .results .objectives .team-one .header-red .win-text, .listing-wrap .results .objectives .team-one .header-blue .win-text, .listing-wrap .results .objectives .team-two .header-red .win-text, .listing-wrap .results .objectives .team-two .header-blue .win-text {
-        color: #56b900;
-        border: 2px solid #56b900; }
+        color: #51af00;
+        border: 2px solid #51af00; }
       .listing-wrap .results .objectives .team-one .header-red .lose-text, .listing-wrap .results .objectives .team-one .header-blue .lose-text, .listing-wrap .results .objectives .team-two .header-red .lose-text, .listing-wrap .results .objectives .team-two .header-blue .lose-text {
         color: #ed2812;
         border: 2px solid #ed2812; }
@@ -718,17 +718,17 @@ header.top-bar {
     color: #fff;
     font-size: .8em;
     left: 40px;
-    background: #5bc300;
+    background: #56b900;
     padding: 4px 10px 5px;
     border-radius: 1px; }
     .live .view-now .fa {
       margin-right: 6px; }
     .live .view-now:hover {
-      background: #58be00; }
+      background: #54b400; }
   .live .indicator {
     right: 40px;
     top: 25px;
-    background: #69e200;
+    background: #64d800;
     width: 20px;
     height: 20px;
     border-radius: 50%;
@@ -764,7 +764,7 @@ header.top-bar {
         .live .info .about-wrap .about .category {
           margin-right: 15px; }
         .live .info .about-wrap .about .stack {
-          color: #69e200; }
+          color: #64d800; }
   .live button.details-btn {
     position: absolute;
     bottom: 15px;
