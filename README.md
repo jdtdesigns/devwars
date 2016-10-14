@@ -1,14 +1,8 @@
-Name Ideas:
+# Write your trello email address to get access to the trello dev board.
 
-Functionality Ideas:
-1. No show tags in profiles
-2. Add admin: false/true boolean to user in db rules. Then check on frontend for admin: true.
-
-
-1. Code Arena
 
 Code Proposals:
-1. Adding to the header.top-bar or sidebar an username loged in info/menu
+1. Adding to the header.top-bar or sidebar an username loged in info/menu #This will be in the sidebar as discussed
 
 To solve:
 1. Login/Registration JS validation rules (@sorinr i propose using data attributes) @JD good idea ;)

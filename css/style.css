@@ -412,7 +412,7 @@ header.top-bar {
     padding: 2px 0 5px 25px;
     font-size: 1.2em;
     color: #777; }
-  .listing-wrap .details {
+  .listing-wrap .details, .listing-wrap .results {
     position: absolute;
     top: 0;
     left: 0;
@@ -422,24 +422,24 @@ header.top-bar {
     min-height: 100vh;
     padding: 100px 0 25px 210px;
     border-radius: 1px; }
-    .listing-wrap .details > div {
+    .listing-wrap .details > div, .listing-wrap .results > div {
       position: relative; }
-      .listing-wrap .details > div .admin-panel {
+      .listing-wrap .details > div .admin-panel, .listing-wrap .results > div .admin-panel {
         position: absolute;
         top: 10px;
         left: 15px; }
-        .listing-wrap .details > div .admin-panel .fa {
+        .listing-wrap .details > div .admin-panel .fa, .listing-wrap .results > div .admin-panel .fa {
           color: #fff;
           font-size: 1.3em;
           cursor: pointer; }
-          .listing-wrap .details > div .admin-panel .fa:hover {
+          .listing-wrap .details > div .admin-panel .fa:hover, .listing-wrap .results > div .admin-panel .fa:hover {
             color: #eee; }
-    .listing-wrap .details .info {
+    .listing-wrap .details .info, .listing-wrap .results .info {
       color: #fff;
       width: 400px;
       background: #444;
       padding: 35px 0 25px; }
-      .listing-wrap .details .info .title {
+      .listing-wrap .details .info .title, .listing-wrap .results .info .title {
         color: #fff;
         text-align: center;
         font-size: 1.7em;
@@ -447,98 +447,139 @@ header.top-bar {
         transform: scaleY(1.03) skewX(-13deg);
         margin-bottom: 25px;
         padding: 0 25px; }
-      .listing-wrap .details .info .about {
+      .listing-wrap .details .info .stream-alert, .listing-wrap .results .info .stream-alert {
+        font-weight: 300;
+        position: relative;
+        top: -15px;
+        margin-bottom: -5px; }
+        .listing-wrap .details .info .stream-alert h3, .listing-wrap .results .info .stream-alert h3 {
+          color: #f9ce31;
+          font-style: italic;
+          font-weight: 300;
+          margin-right: 20px; }
+        .listing-wrap .details .info .stream-alert .view-details, .listing-wrap .results .info .stream-alert .view-details {
+          background: #54b400;
+          padding: 3px 8px 4px;
+          border-radius: 2px;
+          cursor: pointer;
+          transition: background .2s; }
+          .listing-wrap .details .info .stream-alert .view-details .fa, .listing-wrap .results .info .stream-alert .view-details .fa {
+            margin-right: 4px;
+            font-size: .9em; }
+          .listing-wrap .details .info .stream-alert .view-details:hover, .listing-wrap .results .info .stream-alert .view-details:hover {
+            background: #51af00; }
+          .listing-wrap .details .info .stream-alert .view-details:active, .listing-wrap .results .info .stream-alert .view-details:active {
+            background: #4da500; }
+      .listing-wrap .details .info .about, .listing-wrap .results .info .about {
         background: #333;
         padding: 12px 25px 25px; }
-        .listing-wrap .details .info .about .category {
+        .listing-wrap .details .info .about .category, .listing-wrap .results .info .about .category {
           margin-bottom: 10px;
           text-align: center;
           font-weight: 300;
           font-size: 1.3em;
           color: #cfcfcf;
           transform: scaleY(0.95); }
-        .listing-wrap .details .info .about .when, .listing-wrap .details .info .about .type {
+        .listing-wrap .details .info .about .when, .listing-wrap .results .info .about .when,
+        .listing-wrap .details .info .about .type,
+        .listing-wrap .results .info .about .type {
           font-size: 1.2em;
           font-weight: 300; }
-        .listing-wrap .details .info .about .when {
+        .listing-wrap .details .info .about .when, .listing-wrap .results .info .about .when {
           margin-bottom: 5px; }
-          .listing-wrap .details .info .about .when .date {
+          .listing-wrap .details .info .about .when .date, .listing-wrap .results .info .about .when .date {
             font-size: .9em; }
-          .listing-wrap .details .info .about .when .time {
+          .listing-wrap .details .info .about .when .time, .listing-wrap .results .info .about .when .time {
             letter-spacing: .025em; }
-        .listing-wrap .details .info .about .type .players {
+        .listing-wrap .details .info .about .type .players, .listing-wrap .results .info .about .type .players {
           font-size: .88em; }
-        .listing-wrap .details .info .about .type .stack {
+        .listing-wrap .details .info .about .type .stack, .listing-wrap .results .info .about .type .stack {
           color: #69e200;
           font-size: .89em; }
-    .listing-wrap .details .notes {
+    .listing-wrap .details .notes, .listing-wrap .results .notes {
       background: #5e5e5e;
       padding-bottom: 20px; }
-      .listing-wrap .details .notes h2 {
+      .listing-wrap .details .notes h2, .listing-wrap .results .notes h2 {
         text-align: center;
         font-weight: 300;
         font-size: 1.4em;
         margin-bottom: 15px;
         background: #3b3b3b;
         padding: 13px 0; }
-        .listing-wrap .details .notes h2.header-obj {
-          color: #65a9f3; }
-        .listing-wrap .details .notes h2.header-rules {
-          color: #e36242; }
-      .listing-wrap .details .notes .objectives, .listing-wrap .details .notes .rules {
+        .listing-wrap .details .notes h2.header-obj, .listing-wrap .results .notes h2.header-obj {
+          color: #5ba4f2; }
+        .listing-wrap .details .notes h2.header-rules, .listing-wrap .results .notes h2.header-rules {
+          color: #ee471e; }
+      .listing-wrap .details .notes .objectives, .listing-wrap .results .notes .objectives,
+      .listing-wrap .details .notes .rules,
+      .listing-wrap .results .notes .rules {
         padding: 0 15px; }
-        .listing-wrap .details .notes .objectives li, .listing-wrap .details .notes .rules li {
+        .listing-wrap .details .notes .objectives li, .listing-wrap .results .notes .objectives li,
+        .listing-wrap .details .notes .rules li,
+        .listing-wrap .results .notes .rules li {
           margin-bottom: 10px;
           color: #dedede;
           position: relative;
           padding: 0 15px 0 35px;
           line-height: 1.5; }
-          .listing-wrap .details .notes .objectives li:before, .listing-wrap .details .notes .rules li:before {
+          .listing-wrap .details .notes .objectives li:before, .listing-wrap .results .notes .objectives li:before,
+          .listing-wrap .details .notes .rules li:before,
+          .listing-wrap .results .notes .rules li:before {
             content: '';
             position: absolute;
-            left: 20px;
-            top: 8px;
-            width: 8px;
-            height: 8px; }
-      .listing-wrap .details .notes .objectives {
+            left: 13px;
+            top: 5px;
+            width: 10px;
+            height: 10px; }
+      .listing-wrap .details .notes .objectives, .listing-wrap .results .notes .objectives {
         margin-bottom: 20px; }
-        .listing-wrap .details .notes .objectives li:before {
-          background: #137ae9; }
-      .listing-wrap .details .notes .rules {
+        .listing-wrap .details .notes .objectives li.active:before, .listing-wrap .results .notes .objectives li.active:before {
+          background: #157dec; }
+        .listing-wrap .details .notes .objectives li:before, .listing-wrap .results .notes .objectives li:before {
+          border: 2px solid #157dec; }
+      .listing-wrap .details .notes .rules, .listing-wrap .results .notes .rules {
         padding-bottom: 30px; }
-        .listing-wrap .details .notes .rules li:before {
-          background: #e0502c; }
-    .listing-wrap .details button.register {
+        .listing-wrap .details .notes .rules li.active:before, .listing-wrap .results .notes .rules li.active:before {
+          background: #ee471e; }
+        .listing-wrap .details .notes .rules li:before, .listing-wrap .results .notes .rules li:before {
+          border: 2px solid #ee471e; }
+    .listing-wrap .details button.register, .listing-wrap .results button.register {
       width: 200px;
-      background: #51af00;
+      background: #459600;
       font-size: 1.3em;
       font-weight: 300;
       padding: 12px 0 15px;
       border-radius: 2px;
       margin: 20px auto 0;
-      display: none; }
-      .listing-wrap .details button.register:hover {
-        background: #4da500; }
-      .listing-wrap .details button.register:active {
-        background: #489b00; }
-      .listing-wrap .details button.register.leave {
-        background: #d82b2b; }
-        .listing-wrap .details button.register.leave:hover {
-          background: #ce2626; }
-        .listing-wrap .details button.register.leave:active {
-          background: #c52424; }
-    .listing-wrap .details button.results {
+      transition: background .2s; }
+      .listing-wrap .details button.register:hover, .listing-wrap .results button.register:hover {
+        background: #418b00; }
+      .listing-wrap .details button.register:active, .listing-wrap .results button.register:active {
+        background: #3c8100; }
+      .listing-wrap .details button.register.leave, .listing-wrap .results button.register.leave {
+        background: #e32711; }
+        .listing-wrap .details button.register.leave:hover, .listing-wrap .results button.register.leave:hover {
+          background: #d52410; }
+        .listing-wrap .details button.register.leave:active, .listing-wrap .results button.register.leave:active {
+          background: #cb2310; }
+    .listing-wrap .details button.results-btn, .listing-wrap .results button.results-btn {
       width: 200px;
       margin: 15px auto 0;
       background: #555;
       padding: 7px 0 10px;
       font-size: 1.2em;
-      font-weight: 300; }
-      .listing-wrap .details button.results:hover {
-        background: #585858; }
-      .listing-wrap .details button.results:active {
+      font-weight: 300;
+      transition: background .2s;
+      border-radius: 1px; }
+      .listing-wrap .details button.results-btn:hover, .listing-wrap .results button.results-btn:hover {
         background: #525252; }
-    .listing-wrap .details .joined-notice {
+      .listing-wrap .details button.results-btn:active, .listing-wrap .results button.results-btn:active {
+        background: #4f4f4f; }
+      .listing-wrap .details button.results-btn.closed, .listing-wrap .results button.results-btn.closed {
+        font-style: italic; }
+        .listing-wrap .details button.results-btn.closed:hover, .listing-wrap .results button.results-btn.closed:hover, .listing-wrap .details button.results-btn.closed:active, .listing-wrap .results button.results-btn.closed:active {
+          background: #555; }
+    .listing-wrap .details .joined-notice, .listing-wrap .results .joined-notice {
       position: absolute;
       font-style: italic;
       font-weight: 300;
@@ -548,6 +589,100 @@ header.top-bar {
       color: #f9ce31;
       background: rgba(0, 0, 0, 0.2);
       padding: 20px 25px 20px 20px; }
+  .listing-wrap .results .wrap {
+    background: #444; }
+    .listing-wrap .results .wrap .header {
+      max-width: 450px;
+      padding: 25px;
+      margin: 0 auto; }
+      .listing-wrap .results .wrap .header .title {
+        color: #fff;
+        text-align: center;
+        font-size: 1.7em;
+        font-weight: 300;
+        transform: scaleY(1.03) skewX(-13deg);
+        margin-bottom: 20px; }
+      .listing-wrap .results .wrap .header .final-text {
+        text-align: center;
+        color: #aaa;
+        background: #323232;
+        width: 180px;
+        margin: 0 auto 15px;
+        padding: 4px 0 6px;
+        font-weight: 300; }
+      .listing-wrap .results .wrap .header .about {
+        background: #333;
+        color: #fff;
+        padding: 10px 25px 13px;
+        border-radius: 1px;
+        font-weight: 300; }
+        .listing-wrap .results .wrap .header .about .category {
+          margin-bottom: 3px;
+          text-align: center;
+          font-size: 1.3em;
+          color: #cfcfcf;
+          transform: scaleY(0.95); }
+        .listing-wrap .results .wrap .header .about .players {
+          margin-bottom: 3px; }
+        .listing-wrap .results .wrap .header .about .stack {
+          color: #69e200; }
+  .listing-wrap .results .objectives {
+    padding: 10px 10px 30px; }
+    .listing-wrap .results .objectives .team-one .header-red, .listing-wrap .results .objectives .team-one .header-blue, .listing-wrap .results .objectives .team-two .header-red, .listing-wrap .results .objectives .team-two .header-blue {
+      text-align: center;
+      font-weight: 300;
+      font-size: 1.4em;
+      background: #3a3a3a;
+      padding: 13px 0;
+      text-align: center;
+      width: 100%; }
+      .listing-wrap .results .objectives .team-one .header-red .win-text, .listing-wrap .results .objectives .team-one .header-red .lose-text, .listing-wrap .results .objectives .team-one .header-blue .win-text, .listing-wrap .results .objectives .team-one .header-blue .lose-text, .listing-wrap .results .objectives .team-two .header-red .win-text, .listing-wrap .results .objectives .team-two .header-red .lose-text, .listing-wrap .results .objectives .team-two .header-blue .win-text, .listing-wrap .results .objectives .team-two .header-blue .lose-text {
+        padding: 1px 15px 3px;
+        margin-left: 15px;
+        border-radius: 2px; }
+      .listing-wrap .results .objectives .team-one .header-red .win-text, .listing-wrap .results .objectives .team-one .header-blue .win-text, .listing-wrap .results .objectives .team-two .header-red .win-text, .listing-wrap .results .objectives .team-two .header-blue .win-text {
+        color: #56b900;
+        border: 2px solid #56b900; }
+      .listing-wrap .results .objectives .team-one .header-red .lose-text, .listing-wrap .results .objectives .team-one .header-blue .lose-text, .listing-wrap .results .objectives .team-two .header-red .lose-text, .listing-wrap .results .objectives .team-two .header-blue .lose-text {
+        color: #ed2812;
+        border: 2px solid #ed2812; }
+    .listing-wrap .results .objectives .team-one .head-text, .listing-wrap .results .objectives .team-two .head-text {
+      background: #333;
+      width: 100%;
+      text-align: center;
+      font-weight: 300;
+      padding: 10px 0;
+      color: #fff; }
+    .listing-wrap .results .objectives .team-one ul, .listing-wrap .results .objectives .team-two ul {
+      padding: 10px;
+      background: #333; }
+      .listing-wrap .results .objectives .team-one ul li, .listing-wrap .results .objectives .team-two ul li {
+        margin-bottom: 10px;
+        color: #dedede;
+        position: relative;
+        padding: 0 15px 0 35px;
+        line-height: 1.5; }
+        .listing-wrap .results .objectives .team-one ul li:before, .listing-wrap .results .objectives .team-two ul li:before {
+          content: '';
+          position: absolute;
+          left: 13px;
+          top: 5px;
+          width: 10px;
+          height: 10px; }
+    .listing-wrap .results .objectives .team-one {
+      margin-right: 10px; }
+      .listing-wrap .results .objectives .team-one .header-blue {
+        color: #4497f0; }
+      .listing-wrap .results .objectives .team-one ul li.active:before {
+        background: #157dec; }
+      .listing-wrap .results .objectives .team-one ul li:before {
+        border: 2px solid #157dec; }
+    .listing-wrap .results .objectives .team-two .header-red {
+      color: #ee3520; }
+    .listing-wrap .results .objectives .team-two ul li.active:before {
+      background: #ee3520; }
+    .listing-wrap .results .objectives .team-two ul li:before {
+      border: 2px solid #ee3520; }
   .listing-wrap .listings .listing {
     color: #fff;
     padding: 25px;
@@ -625,7 +760,8 @@ header.top-bar {
       .live .info .about-wrap .about {
         margin-bottom: 5px;
         font-size: 1.1em; }
-        .live .info .about-wrap .about .type, .live .info .about-wrap .about .category {
+        .live .info .about-wrap .about .type,
+        .live .info .about-wrap .about .category {
           margin-right: 15px; }
         .live .info .about-wrap .about .stack {
           color: #69e200; }

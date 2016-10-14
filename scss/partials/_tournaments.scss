@@ -35,8 +35,7 @@
     min-height: 100vh;
     padding: 100px 0 25px 210px;
     border-radius: 1px;
-    // display: none;
-    & > div {
+    &>div {
       position: relative;
       .admin-panel {
         position: absolute;
@@ -66,6 +65,35 @@
         margin-bottom: 25px;
         padding: 0 25px;
       }
+      .stream-alert {
+        font-weight: 300;
+        position: relative;
+        top: -15px;
+        margin-bottom: -5px;
+        h3 {
+          color: $orange;
+          font-style: italic;
+          font-weight: 300;
+          margin-right: 20px;
+        }
+        .view-details {
+          background: darken($green, 9%);
+          padding: 3px 8px 4px;
+          border-radius: 2px;
+          cursor: pointer;
+          transition: background .2s;
+          .fa {
+            margin-right: 4px;
+            font-size: .9em;
+          }
+          &:hover {
+            background: darken($green, 10%);
+          }
+          &:active {
+            background: darken($green, 12%);
+          }
+        }
+      }
       .about {
         background: #333;
         padding: 12px 25px 25px;
@@ -77,7 +105,8 @@
           color: #cfcfcf;
           transform: scaleY(.95);
         }
-        .when, .type {
+        .when,
+        .type {
           font-size: 1.2em;
           font-weight: 300;
         }
@@ -112,13 +141,14 @@
         background: #3b3b3b;
         padding: 13px 0;
         &.header-obj {
-          color: lighten($blue, 15%);
+          color: lighten($blue, 13%);
         }
         &.header-rules {
-          color: lighten(#e0502c, 5%);
+          color: lighten(#ea3d12, 3%);
         }
       }
-      .objectives, .rules {
+      .objectives,
+      .rules {
         padding: 0 15px;
         li {
           margin-bottom: 10px;
@@ -129,63 +159,78 @@
           &:before {
             content: '';
             position: absolute;
-            left: 20px;
-            top: 8px;
-            width: 8px;
-            height: 8px;
+            left: 13px;
+            top: 5px;
+            width: 10px;
+            height: 10px;
           }
         }
       }
       .objectives {
         margin-bottom: 20px;
+        li.active:before {
+          background: darken($blue, 2%);
+        }
         li:before {
-          background: darken($blue, 3%);
+          border: 2px solid darken($blue, 2%);
         }
       }
       .rules {
         padding-bottom: 30px;
+        li.active:before {
+          background: lighten(#ea3d12, 3%);
+        }
         li:before {
-          background: #e0502c;
+          border: 2px solid lighten(#ea3d12, 3%);
         }
       }
     }
     button.register {
       width: 200px;
-      background: darken($green, 10%);
+      background: darken($green, 15%);
       font-size: 1.3em;
       font-weight: 300;
       padding: 12px 0 15px;
       border-radius: 2px;
       margin: 20px auto 0;
-      display: none;
+      transition: background .2s;
       &:hover {
-        background: darken($green, 12%);
+        background: darken($green, 17%);
       }
       &:active {
-        background: darken($green, 14%);
+        background: darken($green, 19%);
       }
       &.leave {
-        background: $red;
+        background: darken($red, 5%);
         &:hover {
-          background: darken($red, 3%);
-        } 
+          background: darken($red, 8%);
+        }
         &:active {
-          background: darken($red, 5%);
+          background: darken($red, 10%);
         }
       }
     }
-    button.results {
+    button.results-btn {
       width: 200px;
       margin: 15px auto 0;
       background: #555;
       padding: 7px 0 10px;
       font-size: 1.2em;
       font-weight: 300;
+      transition: background .2s;
+      border-radius: 1px;
       &:hover {
-        background: lighten(#555, 1%);
+        background: darken(#555, 1.3%);
       }
       &:active {
-        background: darken(#555, 1%);
+        background: darken(#555, 2.2%);
+      }
+      &.closed {
+        font-style: italic;
+        &:hover,
+        &:active {
+          background: #555;
+        }
       }
     }
     .joined-notice {
@@ -198,6 +243,139 @@
       color: $orange;
       background: rgba(0, 0, 0, .2);
       padding: 20px 25px 20px 20px;
+    }
+  }
+  .results {
+    @extend .details;
+    .wrap {
+      background: #444;
+      .header {
+        max-width: 450px;
+        padding: 25px;
+        margin: 0 auto;
+        .title {
+          color: #fff;
+          text-align: center;
+          font-size: 1.7em;
+          font-weight: 300;
+          transform: $skew;
+          margin-bottom: 20px;
+        }
+        .final-text {
+          text-align: center;
+          color: #aaa;
+          background: #323232;
+          width: 180px;
+          margin: 0 auto 15px;
+          padding: 4px 0 6px;
+          font-weight: 300;
+        }
+        .about {
+          background: #333;
+          color: #fff;
+          padding: 10px 25px 13px;
+          border-radius: 1px;
+          font-weight: 300;
+          .category {
+            margin-bottom: 3px;
+            text-align: center;
+            font-size: 1.3em;
+            color: #cfcfcf;
+            transform: scaleY(.95);
+          }
+          .players {
+            margin-bottom: 3px;
+          }
+          .stack {
+            color: $green;
+          }
+        }
+      }
+    }
+    .objectives {
+      padding: 10px 10px 30px;
+      .team-one, .team-two {
+        .header-red, .header-blue {
+          text-align: center;
+          font-weight: 300;
+          font-size: 1.4em;
+          background: #3a3a3a;
+          padding: 13px 0;
+          text-align: center;
+          width: 100%;
+          .win-text, .lose-text {
+            padding: 1px 15px 3px;
+            margin-left: 15px;
+            border-radius: 2px;
+          }
+          .win-text {
+            color: darken($green, 8%);
+            border: 2px solid darken($green, 8%);
+          }
+          .lose-text {
+            color: darken($red, 3%);
+            border: 2px solid darken($red, 3%);
+          }
+        }
+        .head-text {
+          background: #333;
+          width: 100%;
+          text-align: center;
+          font-weight: 300;
+          padding: 10px 0;
+          color: #fff;
+        }
+        ul {
+          padding: 10px;
+          background: #333;
+          li {
+            margin-bottom: 10px;
+            color: #dedede;
+            position: relative;
+            padding: 0 15px 0 35px;
+            line-height: 1.5;
+            &:before {
+              content: '';
+              position: absolute;
+              left: 13px;
+              top: 5px;
+              width: 10px;
+              height: 10px;
+            }
+          }
+        }
+      }
+      .team-one {
+        margin-right: 10px;
+        .header-blue {
+          color: lighten($blue, 8%);
+        }
+        .head-text {
+        }
+        ul {
+          li.active:before {
+            background: darken($blue, 2%);
+          }
+          li:before {
+            border: 2px solid darken($blue, 2%);
+          }
+        }
+      }
+      .team-two {
+        .header-red {
+          color: lighten(#ed2812, 3%);
+        }
+        .head-text {
+        }
+        ul {
+          li.active:before {
+            background: $red;
+          }
+          li:before {
+            border: 2px solid $red;
+          }
+        }
+      }
     }
   }
   .listings {
@@ -289,7 +467,8 @@
       .about {
         margin-bottom: 5px;
         font-size: 1.1em;
-        .type, .category {
+        .type,
+        .category {
           margin-right: 15px;
         }
         .stack {
