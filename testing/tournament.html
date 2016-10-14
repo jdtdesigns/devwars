@@ -7,6 +7,61 @@ and<!doctype html>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
   <link rel="stylesheet" href="../css/style.css">
+  <style>
+    #info-title, #info-category, #info-date, #info-time, #info-stack {
+      background:rgba(0,0,0,.3);
+      font-size: 1.2em;
+      color: #fff;
+      text-align: center;
+      padding: 0 25px;
+      width: 95%;
+      height: 40px;
+      margin: 10px auto;
+    }
+    ::-webkit-input-placeholder{
+      color: #ccc;
+      font-size: 1em;
+    }
+    .calendar{
+      width: 95%;
+      height: 200px;
+      margin: 10px auto;
+    }
+    .picked-date{
+      background: #ee471e;
+      font-size: 0.88em;
+      padding: 10px;
+      width: 160px;
+    }
+    .year{
+      font-size: 2em;
+      font-weight: 500;
+      font-style: bold;
+    }
+    .days{
+      background: #fff;
+    }
+    .clock{
+      margin-top: 100px;
+    }
+    .clock i {
+      margin-right: 5px;
+    }
+    .month{
+      color: #ccc;
+      background: #5e5e5e;
+      height: 35px;
+      padding: 5px;
+    }
+    .day-months{
+      color: #fff;
+      background: #ccc;
+      font-size: 0.88em;
+    }
+    .day-months ul{
+      list-style-type: none;
+    }
+  </style>
 </head>
 
 <body class="light">
@@ -46,9 +101,11 @@ and<!doctype html>
         <div class="styles-shadow-light row">
           <div class="admin-panel row">
             <i class="fa fa-edit"></i>
+            <i class="fa fa-save hide"></i>
           </div>
-          <div class="info column">
+          <div id="info-column" class="info column">
             <h2 class="title">Build a Web Application with Node/React</h2>
+            <input id="info-title" class="hide" type="text" placeholder="Tournament Title" data-bind="h2.title">
             <div class="row x-center y-center stream-alert">
               <h3>*Tournament is live!</h3>
               <div class="view-details row y-center">
@@ -58,9 +115,12 @@ and<!doctype html>
             </div>
             <div class="about column">
               <h3 class="category">Random Ranked Match</h3>
+              <input id="info-category" class="hide" type="text" placeholder="Tournament Category" data-bind="h3.category">
               <div class="when row split">
                 <span class="date">January 12th, 2017</span>
+                <input id="info-date" class="hide" type="date" data-bind="span.date">
                 <span class="time">3:30PM</span>
+                <input id="info-time" class="hide" type="time" data-bind="span.time">
               </div>
               <div class="type row split bottom">
                 <span class="players">Registered Players: 3</span>
@@ -71,6 +131,44 @@ and<!doctype html>
             <button class="results-btn hide">See Results</button>
             <span class="joined-notice">You have joined this tournament!</span>
           </div>
+          
+          <!-- some testing -->
+          <!--<div id="info-edit" class="info column hide">-->
+          <!--  <input id="info-title"  type="text" placeholder="Tournament Title" data-bind="h2.title">-->
+          <!--  <input id="info-category" type="text" placeholder="Tournament Category" data-bind="h3.category">-->
+            <!-- to be styled as a calendar-->
+          <!--  <div class="calendar row">-->
+          <!--    <div class="picked-date column x-center y-center">-->
+          <!--      <span class="year x-center">2017</span>-->
+          <!--      <span class="date">February 12th</span>-->
+          <!--      <span class="clock"><i class="fa fa-clock-o"></i>13:30PM UTC</span>-->
+          <!--    </div>-->
+          <!--    <div class="days column">-->
+          <!--      <div class="month row x-center y-center split">-->
+          <!--        <span><i class="fa fa-chevron-left"></i></span>-->
+          <!--        <span>February 2017</span>-->
+          <!--        <span><i class="fa fa-chevron-right"></i></span>-->
+          <!--        </div>-->
+          <!--        <div class="day-months">-->
+          <!--          <ul class="row split">-->
+          <!--            <li>Sun</li>-->
+          <!--            <li>Mon</li>-->
+          <!--            <li>Tue</li>-->
+          <!--            <li>Wed</li>-->
+          <!--            <li>Thu</li>-->
+          <!--            <li>Fri</li>-->
+          <!--            <li>Sat</li>-->
+          <!--          </ul>-->
+          <!--        </div>-->
+                <!--<input id="info-date" type="date" data-bind="">-->
+          <!--    </div>-->
+          <!--  </div>-->
+            
+            <!--<input id="info-time" type="time" data-bind="span.time">-->
+          <!--  <input id="info-stack" type="text" placeholder="Stack" data-bind="span.stack">-->
+          <!--</div>-->
+          <!-- end testing-->
+          
           <div class="notes column">
             <h2 class="header-obj">Objectives</h2>
             <ul class="objectives">
@@ -223,6 +321,32 @@ and<!doctype html>
   <script src="https://code.jquery.com/jquery-latest.min.js"></script>
   <script src="js/fb.js"></script>
   <script src="js/app.js"></script>
+  <script>
+    // $('i.fa-edit').on("click", function(e){
+    //   $('#info-edit').removeClass('hide');
+    //   $('#info-column').addClass('hide');
+    // });
+    $("h2.title").on("click", function(e){
+      $(this).addClass("hide");
+      $('#info-title').val($(this).text()).removeClass('hide').focus();
+    });
+    $('#info-title').on("keypress", function(e){
+      if(e.keyCode === 13){
+        $(this).addClass("hide");
+        $("h2.title").text($(this).val()).removeClass("hide");
+      }
+    });
+    $("h3.category").on("click", function(e){
+      $(this).addClass("hide");
+      $("#info-category").val($(this).text()).removeClass('hide').focus();
+    });
+    $("#info-category").on("keypress", function(e){
+      if(e.keyCode === 13){
+        $(this).addClass("hide");
+        $("h3.category").text($(this).val()).removeClass("hide");
+      }
+    }); 
+  </script>
 </body>
 
 </html>
