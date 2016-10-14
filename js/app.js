@@ -7,6 +7,7 @@ var app = (function() {
       sidebar.setup() 
       $('#login-modal').load('inc/login-modal.html', function() { modal.setup() });
     });
+    results.setup();
   };
   
   var sidebar = {
@@ -83,6 +84,18 @@ var app = (function() {
       
       $(this).addClass('active').siblings().removeClass('active');
       btn.text(type);
+    }
+  };
+  
+  var results = {
+    setup: function() {
+      $('.results .tabs').find('li').on('click', results.switchView);
+    },
+    switchView: function() {
+      var view = '.' + $(this).text().toLowerCase() + '-view';
+      
+      $('.list').find(view).removeClass('hide').siblings().addClass('hide');
+      $(this).addClass('active').siblings().removeClass('active');
     }
   };
   

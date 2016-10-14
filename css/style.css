@@ -688,20 +688,10 @@ header.top-bar {
         border: 2px solid #ed2812; }
     .listing-wrap .results .results-display .team-blue .list, .listing-wrap .results .results-display .team-red .list {
       background: #333;
-      margin-top: 10px; }
-      .listing-wrap .results .results-display .team-blue .list .head-wrap, .listing-wrap .results .results-display .team-red .list .head-wrap {
-        padding-top: 5px;
-        margin-bottom: 5px; }
-        .listing-wrap .results .results-display .team-blue .list .head-wrap .head-text, .listing-wrap .results .results-display .team-red .list .head-wrap .head-text {
-          font-weight: 300;
-          font-size: 1.3em;
-          color: #bbb;
-          height: 100%;
-          margin-right: 10px;
-          color: #aaa; }
+      max-width: 400px; }
       .overall-table {
         color: #ccc;
-        min-width: 365px;
+        width: 400px;
         border-collapse: collapse; }
         .overall-table thead th {
           background: #2a2a2a;
@@ -746,9 +736,20 @@ header.top-bar {
           border-bottom: 1px solid #2a2a2a; }
         .overall-table .border-right-none {
           border-right: none; }
+      .listing-wrap .results .results-display .team-blue .list .objectives-view .head-wrap, .listing-wrap .results .results-display .team-red .list .objectives-view .head-wrap {
+        padding: 5px 0 8px;
+        margin-bottom: 5px;
+        background: #2d2d2d; }
+        .listing-wrap .results .results-display .team-blue .list .objectives-view .head-wrap .head-text, .listing-wrap .results .results-display .team-red .list .objectives-view .head-wrap .head-text {
+          font-weight: 300;
+          font-size: 1.3em;
+          color: #bbb;
+          height: 100%;
+          margin-right: 10px;
+          color: #aaa; }
       .listing-wrap .results .results-display .team-blue .list .objectives-view .objective-amount, .listing-wrap .results .results-display .team-red .list .objectives-view .objective-amount {
-        background: #282828;
-        padding: 2px 10px 3px;
+        background: #242424;
+        padding: 3px 10px;
         font-size: 1.1em;
         font-weight: 700;
         margin-top: 3px; }
