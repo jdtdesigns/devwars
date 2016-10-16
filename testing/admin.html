@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DevWars__ - Admin</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+      #admin-panel{
+          width: 0;
+          height: 100%;
+          position: fixed;
+          top: 0;
+          left: 0;
+          z-index: 1;
+          background: #111;
+          overflow-x: hidden;
+          transition: 0.5s;
+      }
+      #admin-panel .closebtn{
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+      }
+      .showbtn{
+          margin: 20px;
+          color: #fff;
+          background: #000;
+      }
+      .toolbar {
+          z-index: 1;
+          margin-top: 50px;
+          background: #222;
+      }
+      .toolbar a{
+        padding: 10px;
+        transition: all 0.3s ease;
+        color:#aaa;
+        font-family: 'Lato';
+        font-size: 1.1em;
+        text-transform: uppercase;
+        box-sizing: border-box;
+      }
+      .toolbar a .fa{
+          padding-right: 10px;
+      }
+      .toolbar a:hover{
+          color: #fff;
+          background: #444;
+      }
+      .info-table, .edit-form{
+          margin: 20px 10px;
+          padding: 10px;
+          min-height: 80vh;
+          max-height: 90vh;
+          background: #222;
+      }
+      .info-table{
+          flex-basis: 70%;
+      }
+      .edit-form{
+          flex-basis: 30%;
+      }
+      table{
+          width: 100%;
+          border-collapse: collapse;
+      }
+      
+      table th{
+          color: #5ba4f2;
+          font-size: 0.88em;
+          /*background: #222;*/
+          background: #111;
+          height: 35px;
+          text-align: center;
+      }
+      td {
+          color: #aaa;
+      }
+      th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #111;
+        }
+        tbody{
+            font-size: 0.88em;
+        }
+
+      tr:hover{
+          cursor: default;
+          background-color:#333;
+      }
+      .table-search{
+          padding: 10px;
+      }
+      .table-search input{
+          height: 34px;
+          width: 300px;
+          background: transparent;
+          border: 2px solid #fff;
+          border-radius: 20px;
+          font-size: 1.1em;
+          color: #fff;
+          padding: 0 10px;
+      }
+      .table-pagination{
+          background: #111;
+      }
+      
+      /*dropdown code from _top-bar.scss*/
+    nav.filter .current {
+      padding: 2px 0 3px 5px;
+      width: 127px;
+      border: 2px solid #fff;
+      border-radius: 2px;
+      margin-top: 5px;
+      cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none; }
+    nav.filter .current span {
+        display: inline-block;
+        line-height: 1; }
+    nav.filter .current .current-text {
+        font-size: 1.1em;
+        margin-right: 19px;
+        width: 85%;
+        text-align: center; }
+    nav.filter .current .current-text.fade-in {
+          animation: fadeIn .3s; }
+    nav.filter .current .arrow {
+        color: #fff;
+        transform: rotate(90deg);
+        width: 15%;
+        font-size: 1.6em;
+        line-height: .9;
+        padding-top: 2px;
+        position: relative;
+        top: 4px;
+        right: 5px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none; }
+    nav.filter .current .arrow.up {
+          transform: rotate(-90deg);
+          position: relative;
+          left: -12px;
+          top: -3px; }
+    nav.filter ul {
+      position: absolute;
+      /*top: 40px;*/
+      /*left: 0;*/
+      background: rgba(100, 100, 100, 0.98);
+      transition: max-height .18s;
+      width: 127px;
+      max-height: 0;
+      overflow: hidden; }
+    nav.filter ul.show {
+        max-height: 145px;
+        transition: max-height .2s; }
+    nav.filter ul li {
+        padding: 8px 10px;
+        cursor: pointer; }
+    nav.filter ul li.active, nav.filter ul li:hover {
+          background: rgba(140, 140, 140, 0.7); }
+    nav.filter ul li:not(:last-child) {
+          border-bottom: 1px solid rgba(0, 0, 0, 0.2); }
+    nav{color: #fff; padding: 10px;}
+    
+    /* pagination style*/
+    ul.pagination {
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+    }
+    
+    ul.pagination li {display: inline;}
+    
+    ul.pagination li a {
+        color: #fff;
+        float: left;
+        padding: 8px 16px;
+        text-decoration: none;
+    }
+    
+    ul.pagination li a.active {
+        background-color: #333;
+        color: white;
+    }
+    
+    ul.pagination li a:hover:not(.active) {color: #5ba4f2;}
+  </style>
+</head>
+<body>
+    <button class="showbtn">Show</button>
+    <div id="admin-panel" class="admin">
+        <a href="javascript:void(0)" class="closebtn">&times;</a>
+        <div class="column x-center">            
+            <div class="toolbar row y-center">
+              <a href="#"><i class="fa fa-sitemap"></i>Tournaments</a> 
+              <a href="#"><i class="fa fa-user"></i>Users</a> 
+              <a href="#"><i class="fa fa-cogs"></i>Settings</a> 
+            </div>
+        </div>
+        <div class="row">
+            <div class="info-table column">
+                <div class="top-bar row y-center split">
+                    <nav class="filter">
+                        <div class="current row y-center x-center">
+                          <span class="current-text">All</span>
+                          <span class="arrow">›</span>
+                        </div>
+                        <ul class="column">
+                          <li class="active">All</li>
+                          <li>Live</li>
+                          <li>Upcoming</li>
+                          <li>Finished</li>
+                        </ul>
+                      </nav>
+                    <div class="table-search">
+                        <input type="text" id="search-table" placeholder="Search...">
+                    </div>  
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>TITLE</th>
+                            <th>CATEGORY</th>
+                            <th>DATE</th>
+                            <th>TIME</th>
+                            <th>STACK</th>
+                            <th>PUBLISH</th>
+                            <th>STATUS</th>
+                        </tr>                        
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Build a Web Application with Node/React</td>
+                            <td>Random Team Match</td>
+                            <td>Jan 12, 2017</td>
+                            <td>3:30PM</td>
+                            <td>HTML/CSS/JS</td>
+                            <td>01-05-2017</td>
+                            <td>UPCOMING</td>
+                        </tr>  
+                        <tr>
+                            <td>Build a Web Application with Node/React</td>
+                            <td>Random Team Match</td>
+                            <td>Jan 12, 2017</td>
+                            <td>3:30PM</td>
+                            <td>HTML/CSS/JS</td>
+                            <td>01-05-2017</td>
+                            <td>LIVE</td>
+                        </tr>
+                        <tr>
+                            <td>Build a Web Application with Node/React</td>
+                            <td>Random Team Match</td>
+                            <td>Jan 12, 2017</td>
+                            <td>3:30PM</td>
+                            <td>HTML/CSS/JS</td>
+                            <td>01-05-2017</td>
+                            <td>UPCOMING</td>
+                        </tr>
+                        <tr>
+                            <td>Build a Web Application with Node/React</td>
+                            <td>Random Team Match</td>
+                            <td>Jan 12, 2017</td>
+                            <td>3:30PM</td>
+                            <td>HTML/CSS/JS</td>
+                            <td>01-05-2017</td>
+                            <td>UPCOMING</td>
+                        </tr>  
+                        <tr>
+                            <td>Build a Web Application with Node/React</td>
+                            <td>Random Team Match</td>
+                            <td>Jan 12, 2017</td>
+                            <td>3:30PM</td>
+                            <td>HTML/CSS/JS</td>
+                            <td>01-05-2017</td>
+                            <td>LIVE</td>
+                        </tr>
+                        <tr>
+                            <td>Build a Web Application with Node/React</td>
+                            <td>Random Team Match</td>
+                            <td>Jan 12, 2017</td>
+                            <td>3:30PM</td>
+                            <td>HTML/CSS/JS</td>
+                            <td>01-05-2017</td>
+                            <td>UPCOMING</td>
+                        </tr>  
+                        <tr>
+                            <td>Build a Web Application with Node/React</td>
+                            <td>Random Team Match</td>
+                            <td>Jan 12, 2017</td>
+                            <td>3:30PM</td>
+                            <td>HTML/CSS/JS</td>
+                            <td>01-05-2017</td>
+                            <td>UPCOMING</td>
+                        </tr>  
+                        <tr>
+                            <td>Build a Web Application with Node/React</td>
+                            <td>Random Team Match</td>
+                            <td>Jan 12, 2017</td>
+                            <td>3:30PM</td>
+                            <td>HTML/CSS/JS</td>
+                            <td>01-05-2017</td>
+                            <td>LIVE</td>
+                        </tr>
+                        <tr>
+                            <td>Build a Web Application with Node/React</td>
+                            <td>Random Team Match</td>
+                            <td>Jan 12, 2017</td>
+                            <td>3:30PM</td>
+                            <td>HTML/CSS/JS</td>
+                            <td>01-05-2017</td>
+                            <td>UPCOMING</td>
+                        </tr> 
+                        <tr>
+                            <td>Build a Web Application with Node/React</td>
+                            <td>Random Team Match</td>
+                            <td>Jan 12, 2017</td>
+                            <td>3:30PM</td>
+                            <td>HTML/CSS/JS</td>
+                            <td>01-05-2017</td>
+                            <td>UPCOMING</td>
+                        </tr>  
+                    </tbody>
+                </table>
+                <div class="table-pagination row x-center">
+                    <ul class="pagination">
+                      <li><a href="#">«</a></li>
+                      <li><a href="#">1</a></li>
+                      <li><a class="active" href="#">2</a></li>
+                      <li><a href="#">3</a></li>
+                      <li><a href="#">4</a></li>
+                      <li><a href="#">5</a></li>
+                      <li><a href="#">6</a></li>
+                      <li><a href="#">7</a></li>
+                      <li><a href="#">»</a></li>
+                    </ul>                    
+                </div>
+            </div>
+            <div class="edit-form column">
+                <input type="text">
+                <input type="text">
+                <input type="text">
+                <input type="text">
+            </div>
+        </div>
+
+    </div>
+
+  
+  <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="../js/fb.js"></script>
+  <script src="../js/app.js"></script>
+  <script>
+    $('.showbtn').on('click', function(e) {
+        $('#admin-panel').css('width','100%');
+    });
+    $('.closebtn').on('click', function(e) {
+        $('#admin-panel').css('width','0');
+    });
+  </script>
+</body>
+</html>

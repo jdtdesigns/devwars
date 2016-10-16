@@ -7,7 +7,7 @@ var app = (function() {
       sidebar.setup() 
       $('#login-modal').load('inc/login-modal.html', function() { modal.setup() });
     });
-    results.setup();
+    resultsPanel.setup();
   };
   
   var sidebar = {
@@ -87,9 +87,9 @@ var app = (function() {
     }
   };
   
-  var results = {
+  var resultsPanel = {
     setup: function() {
-      $('.results .tabs').find('li').on('click', results.switchView);
+      $('.results .tabs').find('li').on('click', resultsPanel.switchView);
     },
     switchView: function() {
       var view = '.' + $(this).text().toLowerCase() + '-view';

@@ -38,7 +38,6 @@
   </header>
 
   <div class="content">
-
     <div id="live" class="listing-wrap column">
 
       <!-- Begin Details @JD -->
@@ -114,15 +113,21 @@
               <ul class="row x-center">
                 <li class="active">Overall</li>
                 <li>Objectives</li>
-                <li>Votes</li>
+                <li>Voting</li>
+                <li>Players</li>
               </ul>
             </nav>
           </div>
+          
           <div class="results-display row">
+            
+          <!-- Begin Blue Team Content -->
             <div class="column y-center team-blue">
               <h2 class="header-blue">Blue Team<span class="win-text">Win</span></h2>
               <div class="list column">
-                <div class="overall-view column">
+                
+                <!-- Begin Overall View -->
+                <div class="overall-view column hide">
                   <table class="overall-table">
                     <thead>
                       <tr>
@@ -148,7 +153,9 @@
                     </tr>
                   </table>
                 </div>
+                <!-- End Overall View -->
                 
+                <!--Begin Objectives View -->
                 <div class="objectives-view column hide">
                   <div class="head-wrap row x-center y-center">
                     <h3 class="head-text">Objectives</h3>
@@ -162,13 +169,24 @@
                     <li class="active">Footer with animated text</li>
                   </ul>
                 </div>
+                <!-- End Objectives View -->
+                
+                <!-- Begin Voting View -->
+                <div class="voting-view column">
+                  
+                </div>
+                <!-- End Voting View-->
                 
               </div>
             </div>
+            <!-- End Blue Team Content -->
+            
+            <!-- Begin Red Team Content-->
             <div class="column y-center team-red">
               <h2 class="header-red">Red Team<span class="lose-text">Lose</span></h2>
               <div class="list column">
                 
+                <!-- Begin Overall View -->
                 <div class="overall-view column">
                   <table class="overall-table">
                     <thead>
@@ -195,7 +213,9 @@
                     </tr>
                   </table>
                 </div>
+                <!-- End Overall View -->
                 
+                <!-- Begin Objectives View -->
                 <div class="column objectives-view hide">
                   <div class="head-wrap row x-center y-center">
                     <h3 class="head-text">Objectives</h3>
@@ -211,13 +231,14 @@
                 </div>
               </div>
             </div>
+            <!-- End Red Team Content -->
+            
           </div>
         </div>
       </div>
-
       <!-- End Results-->
 
-
+      <!-- Begin Live Stream Display -->
       <div class="live column" style="background-image: url(https://hd.unsplash.com/photo-1461749280684-dccba630e2f6);">
         <h2 class="live-header">Live Tournament</h2>
         <a href="#" class="view-now"><i class="fa fa-external-link"></i>View Now!</a>
@@ -236,6 +257,7 @@
         </div>
         <button class="details-btn">View Details</button>
       </div>
+      <!-- End Live Stream Display -->
     </div>
 
 
