@@ -1,6 +1,3 @@
-# Write your trello email address to get access to the trello dev board.
-
-
 Code Proposals:
 1. Adding to the header.top-bar or sidebar an username loged in info/menu #This will be in the sidebar as discussed
 

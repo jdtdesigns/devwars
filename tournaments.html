@@ -127,8 +127,8 @@
               <div class="list column">
                 
                 <!-- Begin Overall View -->
-                <div class="overall-view column hide">
-                  <table class="overall-table">
+                <div class="overall-view column">
+                  <table class="results-table">
                     <thead>
                       <tr>
                         <th></th>
@@ -149,7 +149,7 @@
                     </tr>
                     <tr>
                       <th class="total-text">Total</th>
-                      <td class="total-amount win"><span>6</span></td>
+                      <td class="total-amount"><span>6</span></td>
                     </tr>
                   </table>
                 </div>
@@ -157,10 +157,6 @@
                 
                 <!--Begin Objectives View -->
                 <div class="objectives-view column hide">
-                  <div class="head-wrap row x-center y-center">
-                    <h3 class="head-text">Objectives</h3>
-                    <span class="objective-amount">4</span>
-                  </div>
                   <ul class="rules">
                     <li class="active">Desktop/Mobile Nav Bar/Menu</li>
                     <li class="active">Slider with at least 3 slides</li>
@@ -168,14 +164,62 @@
                     <li class="active">At least one parallax effect</li>
                     <li class="active">Footer with animated text</li>
                   </ul>
+                  <div class="total-wrap row x-center y-center">
+                    <h3 class="total-text">Objectives Completed</h3>
+                    <span class="objective-amount">4</span>
+                  </div>
                 </div>
                 <!-- End Objectives View -->
                 
                 <!-- Begin Voting View -->
-                <div class="voting-view column">
-                  
+                <div class="voting-view column hide">
+                  <table class="results-table">
+                    <thead>
+                      <tr>
+                        <th></th>
+                        <th class="border-right-none">Votes</th>
+                      </tr>
+                    </thead>
+                    <tr>
+                      <th>Design</th>
+                      <td>22</td>
+                    </tr>
+                    <tr>
+                      <th>Functionality</th>
+                      <td>18</td>
+                    </tr>
+                    <tr>
+                      <th class="total-text">Total</th>
+                      <td class="total-amount"><span>40</span></td>
+                    </tr>
+                  </table>
                 </div>
                 <!-- End Voting View-->
+                
+                <!-- Begin Players View -->
+                <div class="players-view column">
+                  <table class="results-table">
+                    <thead>
+                      <tr>
+                        <th>Players</th>
+                        <th>Skill Points</th>
+                      </tr>
+                    </thead>
+                    <tr>
+                      <th>xpertCoder<span class="player-role">HTML</span></th>
+                      <td class="skill-points"><span class="plus">+</span>100 SP</td>
+                    </tr>
+                    <tr>
+                      <th>neo<span class="player-role">CSS</span></th>
+                      <td class="skill-points"><span class="plus">+</span>100 SP</td>
+                    </tr>
+                    <tr>
+                      <th>l33t<span class="player-role">JS</span></th>
+                      <td class="skill-points"><span class="plus">+</span>100 SP</td>
+                    </tr>
+                  </table>
+                </div>
+                <!-- End Players View -->
                 
               </div>
             </div>
@@ -188,7 +232,7 @@
                 
                 <!-- Begin Overall View -->
                 <div class="overall-view column">
-                  <table class="overall-table">
+                  <table class="results-table">
                     <thead>
                       <tr>
                         <th></th>
@@ -205,11 +249,11 @@
                     </tr>
                     <tr>
                       <th>Functionality</th>
-                      <td>1</td>
+                      <td>0</td>
                     </tr>
                     <tr>
                       <th class="total-text">Total</th>
-                      <td class="total-amount lose"><span>4</span></td>
+                      <td class="total-amount"><span>3</span></td>
                     </tr>
                   </table>
                 </div>
@@ -217,10 +261,6 @@
                 
                 <!-- Begin Objectives View -->
                 <div class="column objectives-view hide">
-                  <div class="head-wrap row x-center y-center">
-                    <h3 class="head-text">Objectives</h3>
-                    <span class="objective-amount">3</span>
-                  </div>
                   <ul class="rules">
                     <li>Desktop/Mobile Nav Bar/Menu</li>
                     <li class="active">Slider with at least 3 slides</li>
@@ -228,7 +268,62 @@
                     <li class="active">At least one parallax effect</li>
                     <li>Footer with animated text</li>
                   </ul>
+                  <div class="total-wrap row x-center y-center">
+                    <h3 class="total-text">Objectives Completed</h3>
+                    <span class="objective-amount lose">3</span>
+                  </div>
                 </div>
+                
+                <!-- Begin Voting View -->
+                <div class="voting-view column hide">
+                  <table class="results-table">
+                    <thead>
+                      <tr>
+                        <th></th>
+                        <th>Votes</th>
+                      </tr>
+                    </thead>
+                    <tr>
+                      <th>Design</th>
+                      <td>15</td>
+                    </tr>
+                    <tr>
+                      <th>Functionality</th>
+                      <td>10</td>
+                    </tr>
+                    <tr>
+                      <th class="total-text">Total</th>
+                      <td class="total-amount"><span>25</span></td>
+                    </tr>
+                  </table>
+                </div>
+                <!-- End Voting View-->
+                
+                <!-- Begin Players View -->
+                <div class="players-view column">
+                  <table class="results-table">
+                    <thead>
+                      <tr>
+                        <th>Players</th>
+                        <th>Skill Points</th>
+                      </tr>
+                    </thead>
+                    <tr>
+                      <th>xpertCoder<span class="player-role">HTML</span></th>
+                      <td class="skill-points lose"><span class="plus">+</span>25 SP</td>
+                    </tr>
+                    <tr>
+                      <th>neo<span class="player-role">CSS</span></th>
+                      <td class="skill-points lose"><span class="plus">+</span>25 SP</td>
+                    </tr>
+                    <tr>
+                      <th>l33t<span class="player-role">JS</span></th>
+                      <td class="skill-points lose"><span class="plus">+</span>25 SP</td>
+                    </tr>
+                  </table>
+                </div>
+                <!-- End Players View -->
+                
               </div>
             </div>
             <!-- End Red Team Content -->

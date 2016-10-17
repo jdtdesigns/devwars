@@ -689,72 +689,75 @@ header.top-bar {
     .listing-wrap .results .results-display .team-blue .list, .listing-wrap .results .results-display .team-red .list {
       background: #333;
       max-width: 400px; }
-      .overall-table {
+      .results-table {
         color: #ccc;
         width: 400px;
         border-collapse: collapse; }
-        .overall-table thead th {
+        .results-table thead th {
           background: #2a2a2a;
           padding: 10px 5px 13px;
           min-width: 110px;
           font-size: 1.25em;
           font-weight: 300;
           color: #aaa;
-          border-bottom: 1px solid #1a1a1a; }
-        .overall-table th {
+          border-bottom: 1px solid #222; }
+        .results-table th {
           font-weight: 300;
           color: #aaa;
           background: #212121;
           padding: 9px 15px 11px;
           font-size: 1.2em;
-          border-right: 1px solid #1a1a1a;
           border-bottom: 1px solid #1a1a1a; }
-          .overall-table th.total-text {
+          .results-table th:not(:last-child) {
+            border-right: 1px solid #1c1c1c; }
+          .results-table th .player-role {
+            font-size: .8em;
+            background: #1c1c1c;
+            display: inline-block;
+            padding: 2px 8px 4px;
+            margin-left: 10px;
+            text-transform: uppercase; }
+          .results-table th.total-text {
             background: #1a1a1a;
             font-size: 1.4em;
             border-right: 1px solid #1a1a1a;
             border-bottom: none; }
-        .overall-table td {
+        .results-table td {
           padding: 5px 15px;
           text-align: center;
-          font-size: 1.4em;
+          font-size: 1.3em;
           font-weight: 300;
-          border-bottom: 1px solid #272727; }
-          .overall-table td.total-amount {
-            background: #2a2a2a; }
-            .overall-table td.total-amount.win {
-              color: #64d800; }
-            .overall-table td.total-amount.lose {
-              color: #ee3520; }
-          .overall-table td span {
+          background: #2e2e2e;
+          border-bottom: 1px solid #252525; }
+          .results-table td.total-amount {
+            background: #282828;
+            font-weight: 300;
+            font-size: 1.4em; }
+          .results-table td span:not(.plus) {
             background: #1b1b1b;
             padding: 2px 13px 4px;
             border-radius: 1px; }
-        .overall-table .right-border {
+          .results-table td.skill-points {
+            color: #5dc900;
+            font-size: 1.2em; }
+            .results-table td.skill-points .plus {
+              font-size: 1.3em;
+              line-height: .8;
+              position: relative;
+              bottom: -2px;
+              margin-right: 3px;
+              display: inline-block; }
+            .results-table td.skill-points.lose {
+              color: #f9ce31; }
+        .results-table .right-border {
           border-right: 1px solid #2a2a2a; }
-        .overall-table .bottom-border {
+        .results-table .bottom-border {
           border-bottom: 1px solid #2a2a2a; }
-        .overall-table .border-right-none {
+        .results-table .border-right-none {
           border-right: none; }
-      .listing-wrap .results .results-display .team-blue .list .objectives-view .head-wrap, .listing-wrap .results .results-display .team-red .list .objectives-view .head-wrap {
-        padding: 5px 0 8px;
-        background: #2b2b2b; }
-        .listing-wrap .results .results-display .team-blue .list .objectives-view .head-wrap .head-text, .listing-wrap .results .results-display .team-red .list .objectives-view .head-wrap .head-text {
-          font-weight: 300;
-          font-size: 1.3em;
-          color: #bbb;
-          height: 100%;
-          margin-right: 10px;
-          color: #aaa; }
-      .listing-wrap .results .results-display .team-blue .list .objectives-view .objective-amount, .listing-wrap .results .results-display .team-red .list .objectives-view .objective-amount {
-        background: #242424;
-        padding: 5px 10px;
-        font-size: 1.1em;
-        font-weight: 700;
-        margin-top: 3px; }
       .listing-wrap .results .results-display .team-blue .list .objectives-view ul.rules, .listing-wrap .results .results-display .team-red .list .objectives-view ul.rules {
         padding: 14px 10px 10px;
-        background: #242424; }
+        background: #2a2a2a; }
         .listing-wrap .results .results-display .team-blue .list .objectives-view ul.rules li, .listing-wrap .results .results-display .team-red .list .objectives-view ul.rules li {
           margin-bottom: 10px;
           color: #dedede;
@@ -772,29 +775,42 @@ header.top-bar {
             top: 5px;
             width: 10px;
             height: 10px; }
+      .listing-wrap .results .results-display .team-blue .list .objectives-view .total-wrap, .listing-wrap .results .results-display .team-red .list .objectives-view .total-wrap {
+        padding: 5px 0 8px;
+        background: #212121; }
+        .listing-wrap .results .results-display .team-blue .list .objectives-view .total-wrap .total-text, .listing-wrap .results .results-display .team-red .list .objectives-view .total-wrap .total-text {
+          font-weight: 300;
+          font-size: 1.3em;
+          color: #bbb;
+          height: 100%;
+          margin-right: 10px;
+          color: #aaa; }
+        .listing-wrap .results .results-display .team-blue .list .objectives-view .total-wrap .objective-amount, .listing-wrap .results .results-display .team-red .list .objectives-view .total-wrap .objective-amount {
+          background: #171717;
+          padding: 1px 12px 2px;
+          font-size: 1.4em;
+          margin-top: 3px; }
+      .listing-wrap .results .results-display .team-blue .list .players-view th, .listing-wrap .results .results-display .team-red .list .players-view th {
+        padding: 10px 10px 12px; }
+      .listing-wrap .results .results-display .team-blue .list .players-view thead th, .listing-wrap .results .results-display .team-red .list .players-view thead th {
+        padding: 11px 10px 13px; }
     .listing-wrap .results .results-display .team-blue {
       margin-right: 10px; }
       .listing-wrap .results .results-display .team-blue .header-blue {
         color: #4497f0; }
-      .listing-wrap .results .results-display .team-blue .list .overall-view td {
+      .listing-wrap .results .results-display .team-blue .list .overall-view td, .listing-wrap .results .results-display .team-blue .list .voting-view td {
         color: #1e82ed; }
-      .listing-wrap .results .results-display .team-blue .list .overall-view td.win {
-        color: #64d800; }
-      .listing-wrap .results .results-display .team-blue .list .overall-view td.lose {
-        color: #ee3520; }
       .listing-wrap .results .results-display .team-blue .list .objectives-view .objective-amount {
-        color: #1e82ed; }
+        color: #157dec; }
       .listing-wrap .results .results-display .team-blue .list .objectives-view ul li.active:before {
         background: #157dec; }
       .listing-wrap .results .results-display .team-blue .list .objectives-view ul li:before {
         border: 2px solid #157dec; }
+      .listing-wrap .results .results-display .team-blue .list .players-view .player-role {
+        color: #2c8aee; }
     .listing-wrap .results .results-display .team-red .header-red {
       color: #ee3520; }
-    .listing-wrap .results .results-display .team-red .list .overall-view td {
-      color: red; }
-    .listing-wrap .results .results-display .team-red .list .overall-view td.win {
-      color: #64d800; }
-    .listing-wrap .results .results-display .team-red .list .overall-view td.lose {
+    .listing-wrap .results .results-display .team-red .list .overall-view td, .listing-wrap .results .results-display .team-red .list .voting-view td {
       color: #ee3520; }
     .listing-wrap .results .results-display .team-red .list .objectives-view .objective-amount {
       color: #ee3520; }
@@ -802,6 +818,8 @@ header.top-bar {
       background: #ee3520; }
     .listing-wrap .results .results-display .team-red .list .objectives-view ul li:before {
       border: 2px solid #ee3520; }
+    .listing-wrap .results .results-display .team-red .list .players-view .player-role {
+      color: #ef422e; }
   .listing-wrap .listings .listing {
     color: #fff;
     padding: 25px;

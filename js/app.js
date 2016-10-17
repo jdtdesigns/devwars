@@ -92,9 +92,17 @@ var app = (function() {
       $('.results .tabs').find('li').on('click', resultsPanel.switchView);
     },
     switchView: function() {
-      var view = '.' + $(this).text().toLowerCase() + '-view';
+      var view = '.' + $(this).text().toLowerCase() + '-view',
+          resultText = $('.results-display').find('.win-text, .lose-text');
       
-      $('.list').find(view).removeClass('hide').siblings().addClass('hide');
+      if ( view == '.overall-view' ) {
+        resultText.removeClass('hide');
+        $('.list').find(view).removeClass('hide').siblings().addClass('hide');
+      } else {
+        resultText.addClass('hide');
+        $('.list').find(view).removeClass('hide').siblings().addClass('hide');
+      }
+      
       $(this).addClass('active').siblings().removeClass('active');
     }
   };

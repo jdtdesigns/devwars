@@ -42,7 +42,6 @@
         font-family: 'Lato';
         font-size: 1.1em;
         text-transform: uppercase;
-        box-sizing: border-box;
       }
       .toolbar a .fa{
           padding-right: 10px;
@@ -194,6 +193,32 @@
     }
     
     ul.pagination li a:hover:not(.active) {color: #5ba4f2;}
+    
+    .action-bar{
+        margin-top: 12px;
+        background: #111;
+    }
+    .action-bar a{
+        padding: 10px;
+        color: #aaa;
+    }
+    .action-bar a i.fa{
+        padding-right: 5px;
+    }
+    .action-bar a:hover{
+        color: #fff;
+        background: #444;
+    }
+    .data-edit{
+        margin-top: 10px;
+    }
+    .data-edit input{
+        margin: 5px 0px;
+        padding: 10px 5px;
+        color: #fff;
+        background:#444;
+        font-size: 1.2em;
+    }
   </style>
 </head>
 <body>
@@ -346,10 +371,17 @@
                 </div>
             </div>
             <div class="edit-form column">
-                <input type="text">
-                <input type="text">
-                <input type="text">
-                <input type="text">
+                <div class="action-bar row y-center">
+                    <a href="#"><i class="fa fa-file-o"  aria-hidden="true"></i>New</a>
+                    <a href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Edit</a>
+                    <a href="#"><i class="fa fa-save" aria-hidden="true"></i>Save</a>
+                </div>
+                <div class="data-edit column">
+                    <input type="text" placeholder="Tournament Title">
+                    <input type="text" placeholder="Category">
+                    <!--<input type="text">-->
+                    <!--<input type="text">-->                   
+                </div>
             </div>
         </div>
 
