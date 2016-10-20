@@ -676,6 +676,23 @@ header.top-bar {
       padding: 13px 0;
       text-align: center;
       width: 100%; }
+      .listing-wrap .results .results-display .team-blue .header-red .team-points, .listing-wrap .results .results-display .team-blue .header-blue .team-points, .listing-wrap .results .results-display .team-red .header-red .team-points, .listing-wrap .results .results-display .team-red .header-blue .team-points {
+        letter-spacing: .02em;
+        color: #64d800;
+        font-weight: 300;
+        font-size: 14px;
+        background: #2a2a2a;
+        padding: 5px 6px 9px;
+        border-radius: 2px;
+        position: relative;
+        margin-left: 15px;
+        top: -3px; }
+        .listing-wrap .results .results-display .team-blue .header-red .team-points span, .listing-wrap .results .results-display .team-blue .header-blue .team-points span, .listing-wrap .results .results-display .team-red .header-red .team-points span, .listing-wrap .results .results-display .team-red .header-blue .team-points span {
+          font-size: 1.2em;
+          position: relative;
+          top: 1px; }
+        .listing-wrap .results .results-display .team-blue .header-red .team-points.lose, .listing-wrap .results .results-display .team-blue .header-blue .team-points.lose, .listing-wrap .results .results-display .team-red .header-red .team-points.lose, .listing-wrap .results .results-display .team-red .header-blue .team-points.lose {
+          color: #f9ce31; }
       .listing-wrap .results .results-display .team-blue .header-red .win-text, .listing-wrap .results .results-display .team-blue .header-red .lose-text, .listing-wrap .results .results-display .team-blue .header-blue .win-text, .listing-wrap .results .results-display .team-blue .header-blue .lose-text, .listing-wrap .results .results-display .team-red .header-red .win-text, .listing-wrap .results .results-display .team-red .header-red .lose-text, .listing-wrap .results .results-display .team-red .header-blue .win-text, .listing-wrap .results .results-display .team-red .header-blue .lose-text {
         padding: 1px 15px 3px;
         margin-left: 15px;
@@ -710,18 +727,6 @@ header.top-bar {
           border-bottom: 1px solid #1a1a1a; }
           .results-table th:not(:last-child) {
             border-right: 1px solid #1c1c1c; }
-          .results-table th .player-role {
-            font-size: .8em;
-            background: #1c1c1c;
-            display: inline-block;
-            padding: 2px 8px 4px;
-            margin-left: 10px;
-            text-transform: uppercase; }
-          .results-table th.total-text {
-            background: #1a1a1a;
-            font-size: 1.4em;
-            border-right: 1px solid #1a1a1a;
-            border-bottom: none; }
         .results-table td {
           padding: 5px 15px;
           text-align: center;
@@ -733,22 +738,6 @@ header.top-bar {
             background: #282828;
             font-weight: 300;
             font-size: 1.4em; }
-          .results-table td span:not(.plus) {
-            background: #1b1b1b;
-            padding: 2px 13px 4px;
-            border-radius: 1px; }
-          .results-table td.skill-points {
-            color: #5dc900;
-            font-size: 1.2em; }
-            .results-table td.skill-points .plus {
-              font-size: 1.3em;
-              line-height: .8;
-              position: relative;
-              bottom: -2px;
-              margin-right: 3px;
-              display: inline-block; }
-            .results-table td.skill-points.lose {
-              color: #f9ce31; }
         .results-table .right-border {
           border-right: 1px solid #2a2a2a; }
         .results-table .bottom-border {
@@ -792,8 +781,36 @@ header.top-bar {
           margin-top: 3px; }
       .listing-wrap .results .results-display .team-blue .list .players-view th, .listing-wrap .results .results-display .team-red .list .players-view th {
         padding: 10px 10px 12px; }
+        .listing-wrap .results .results-display .team-blue .list .players-view th .player-role, .listing-wrap .results .results-display .team-red .list .players-view th .player-role {
+          font-size: .8em;
+          background: #1c1c1c;
+          display: inline-block;
+          padding: 2px 8px 4px;
+          margin-left: 10px;
+          text-transform: uppercase; }
+        .listing-wrap .results .results-display .team-blue .list .players-view th.total-text, .listing-wrap .results .results-display .team-red .list .players-view th.total-text {
+          background: #1a1a1a;
+          font-size: 1.4em;
+          border-right: 1px solid #1a1a1a;
+          border-bottom: none; }
       .listing-wrap .results .results-display .team-blue .list .players-view thead th, .listing-wrap .results .results-display .team-red .list .players-view thead th {
-        padding: 11px 10px 13px; }
+        padding: 10px 10px 12px; }
+      .listing-wrap .results .results-display .team-blue .list .players-view td span:not(.plus), .listing-wrap .results .results-display .team-red .list .players-view td span:not(.plus) {
+        background: #1b1b1b;
+        padding: 2px 13px 4px;
+        border-radius: 1px; }
+      .listing-wrap .results .results-display .team-blue .list .players-view td.skill-points, .listing-wrap .results .results-display .team-red .list .players-view td.skill-points {
+        color: #5dc900;
+        font-size: 1.05em; }
+        .listing-wrap .results .results-display .team-blue .list .players-view td.skill-points .plus, .listing-wrap .results .results-display .team-red .list .players-view td.skill-points .plus {
+          font-size: 1.3em;
+          line-height: .8;
+          position: relative;
+          bottom: -2px;
+          margin-right: 3px;
+          display: inline-block; }
+        .listing-wrap .results .results-display .team-blue .list .players-view td.skill-points.lose, .listing-wrap .results .results-display .team-red .list .players-view td.skill-points.lose {
+          color: #f9ce31; }
     .listing-wrap .results .results-display .team-blue {
       margin-right: 10px; }
       .listing-wrap .results .results-display .team-blue .header-blue {

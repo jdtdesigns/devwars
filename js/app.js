@@ -93,13 +93,16 @@ var app = (function() {
     },
     switchView: function() {
       var view = '.' + $(this).text().toLowerCase() + '-view',
-          resultText = $('.results-display').find('.win-text, .lose-text');
+          resultText = $('.results-display').find('.win-text, .lose-text'),
+          teamPoints = $('.results-display').find('.team-points');
       
       if ( view == '.overall-view' ) {
         resultText.removeClass('hide');
+        teamPoints.removeClass('hide');
         $('.list').find(view).removeClass('hide').siblings().addClass('hide');
       } else {
         resultText.addClass('hide');
+        teamPoints.addClass('hide');
         $('.list').find(view).removeClass('hide').siblings().addClass('hide');
       }
       

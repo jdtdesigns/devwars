@@ -331,6 +331,26 @@
           padding: 13px 0;
           text-align: center;
           width: 100%;
+          .team-points {
+            letter-spacing: .02em;
+            color: $green;
+            font-weight: 300;
+            font-size: 14px;
+            background: #2a2a2a;
+            padding: 5px 6px 9px;
+            border-radius: 2px;
+            position: relative;
+            margin-left: 15px;
+            top: -3px;
+            span {
+              font-size: 1.2em;
+              position: relative;
+              top: 1px;
+            }
+            &.lose {
+              color: $orange;
+            }
+          }
           .win-text, .lose-text {
             padding: 1px 15px 3px;
             margin-left: 15px;
@@ -374,20 +394,6 @@
                 &:not(:last-child) {
                   border-right: 1px solid #1c1c1c;
                 }
-                .player-role {
-                  font-size: .8em;
-                  background: #1c1c1c;
-                  display: inline-block;
-                  padding: 2px 8px 4px;
-                  margin-left: 10px;
-                  text-transform: uppercase;
-                }
-                &.total-text {
-                  background: #1a1a1a;
-                  font-size: 1.4em;
-                  border-right: 1px solid #1a1a1a;
-                  border-bottom: none;
-                }
               }
               td {
                 padding: 5px 15px;
@@ -400,26 +406,6 @@
                   background: #282828;
                   font-weight: 300;
                   font-size: 1.4em;
-                }
-                span:not(.plus) {
-                  background: #1b1b1b;
-                  padding: 2px 13px 4px;
-                  border-radius: 1px;
-                }
-                &.skill-points {
-                  color: darken($green, 3%);
-                  font-size: 1.2em;
-                  .plus {
-                    font-size: 1.3em;
-                    line-height: .8;
-                    position: relative;
-                    bottom: -2px;
-                    margin-right: 3px;
-                    display: inline-block;
-                  }
-                  &.lose {
-                    color: $orange;
-                  }
                 }
               }
               .right-border {
@@ -479,9 +465,45 @@
           .players-view {
             th {
               padding: 10px 10px 12px;
+              .player-role {
+                font-size: .8em;
+                background: #1c1c1c;
+                display: inline-block;
+                padding: 2px 8px 4px;
+                margin-left: 10px;
+                text-transform: uppercase;
+              }
+              &.total-text {
+                background: #1a1a1a;
+                font-size: 1.4em;
+                border-right: 1px solid #1a1a1a;
+                border-bottom: none;
+              }
             }
             thead th {
-              padding: 11px 10px 13px;;
+              padding: 10px 10px 12px;;
+            }
+            td {
+              span:not(.plus) {
+                background: #1b1b1b;
+                padding: 2px 13px 4px;
+                border-radius: 1px;
+              }
+              &.skill-points {
+                color: darken($green, 3%);
+                font-size: 1.05em;
+                .plus {
+                  font-size: 1.3em;
+                  line-height: .8;
+                  position: relative;
+                  bottom: -2px;
+                  margin-right: 3px;
+                  display: inline-block;
+                }
+                &.lose {
+                  color: $orange;
+                }
+              }
             }
           }
         }
