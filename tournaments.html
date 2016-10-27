@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <title>DevWars__ - Tournaments</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -33,10 +33,52 @@
         </ul>
       </nav>
     </div>
-    <button id="create-tournament" class="create-btn">Create Tournament</button>
+    <div class="row y-center">
+      <button id="create-tournament" class="create-btn">Create Tournament</button>
+      
+      <nav class="admin-nav">
+        <i class="fa fa-user">
+          <ul>
+            <li>Tournaments</li>
+            <li>Leaderboards</li>
+            <li>Teams</li>
+          </ul>
+        </i>
+      </nav>
+    </div>
   </header>
 
   <div class="content">
+     <!-- Begin Admin Panel -->
+     <div class="admin">
+      <div class="tournament-list column y-center">
+      <h1 class="list-header">Tournament Listings</h1>
+      <table class="list-table">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Title</th>
+            <th>Stack</th>
+            <th>Players</th>
+            <th>Type</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Jan, 12 2017</td>
+            <td>3:30 PM</td>
+            <td>StarWars</td>
+            <td>HTML/CSS/JS</td>
+            <td>6</td>
+            <td>Random Team Match</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>  
+    </div>
+    <!-- End Admin Panel -->
     <div id="live" class="listing-wrap column ">
 
       <!-- Begin Details @JD -->
@@ -70,9 +112,7 @@
           </div>
         </div>
         <!-- End Bracket Display -->
-        <div class="admin-panel row">
-          <i class="fa fa-edit"></i>
-        </div>
+        <i class="edit-button fa fa-edit"></i>
         <div class="info column">
           <h2 class="title">Build a Web Application with Node/React</h2>
           <div class="row x-center y-center stream-alert">
