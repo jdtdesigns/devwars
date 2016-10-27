@@ -1,0 +1,13 @@
+{
+  "devDependencies": {
+    "browser-sync": "^*",
+    "gulp": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-concat": "*",
+    "gulp-jshint": "*",
+    "gulp-plumber": "*",
+    "gulp-sass": "*",
+    "gulp-uglify": "*",
+    "gulp-watch": "*"
+  }
+}

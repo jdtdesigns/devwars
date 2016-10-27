@@ -4,8 +4,8 @@ var app = (function() {
   var init = function() {
     topbar.setup();
     $('#sidebar').load('inc/sidebar.html', function() {
-      sidebar.setup() 
-      $('#login-modal').load('inc/login-modal.html', function() { modal.setup() });
+      sidebar.setup(); 
+      $('#login-modal').load('inc/login-modal.html', function() { modal.setup(); });
     });
     resultsPanel.setup();
   };
@@ -33,7 +33,7 @@ var app = (function() {
       $('body').on('click', modal.hide);
       
       // Keep modal from closing when clicking inside
-      $('.login').on('click', function(e) { e.stopPropagation() });
+      $('.login').on('click', function(e) { e.stopPropagation(); });
       
       $('#register').on('click', modal.switchState);
     },
@@ -90,14 +90,15 @@ var app = (function() {
   var resultsPanel = {
     setup: function() {
       $('.results .tabs').find('li').on('click', resultsPanel.switchView);
+      $('.results').find('.team-points').addClass('hide');
     },
     switchView: function() {
       var view = '.' + $(this).text().toLowerCase() + '-view',
           resultText = $('.results-display').find('.win-text, .lose-text'),
           teamPoints = $('.results-display').find('.team-points');
       
-      if ( view == '.overall-view' ) {
-        resultText.removeClass('hide');
+
+      if ( view == '.points-view' ) {
         teamPoints.removeClass('hide');
         $('.list').find(view).removeClass('hide').siblings().addClass('hide');
       } else {
@@ -106,6 +107,8 @@ var app = (function() {
         $('.list').find(view).removeClass('hide').siblings().addClass('hide');
       }
       
+      if ( view == '.overall-view' ) resultText.removeClass('hide');
+
       $(this).addClass('active').siblings().removeClass('active');
     }
   };

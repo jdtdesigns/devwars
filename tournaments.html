@@ -34,342 +34,350 @@
       </nav>
     </div>
     <button id="create-tournament" class="create-btn">Create Tournament</button>
-
   </header>
 
   <div class="content">
     <div id="live" class="listing-wrap column ">
 
       <!-- Begin Details @JD -->
-      <div class="details column y-center hide ">
-        <div class="styles-shadow-light row">
-          <div class="admin-panel row">
-            <i class="fa fa-edit"></i>
-          </div>
-          <div class="info column">
-            <h2 class="title">Build a Web Application with Node/React</h2>
-            <div class="row x-center y-center stream-alert">
-              <h3>*Tournament is live!</h3>
-              <div class="view-details row y-center">
-                <i class="fa fa-external-link"></i>
-                <span>Watch Now!</span>
+      <div class="details column y-center">
+        <div class="details-content styles-shadow-light row">
+        <!-- Begin Bracket Display -->
+         <div class="bracket-display column y-center hide">
+          <h1 class="bracket-header">Tournament Bracket</h1>
+          <div class="bracket-wrap row six">
+            <div class="bracket-blue column y-center">
+              <h2 class="team-header">Blue Team</h2>
+              <div class="player-wrap column">
+                <span>el1t3</span>
+                <span>pr0c0der</span>
+                <span>h4x0r</span>
               </div>
             </div>
-            <div class="about column">
-              <h3 class="category">Random Team Match</h3>
-              <div class="when row split">
-                <span class="date">January 12th, 2017</span>
-                <span class="time">3:30PM</span>
-              </div>
-              <div class="type row split bottom">
-                <span class="players">Registered Players: 3</span>
-                <span class="stack">HTML/CSS/JS</span>
+            <div class="bracket-winner column y-center x-center">
+              <span class="winner-header">Winner</span>
+              <span class="blue column y-center x-center">Blue Team</span>
+            </div>
+            <div class="bracket-red column y-center">
+              <h2 class="team-header">Red Team</h2>
+              <div class="player-wrap column">
+                <span>el1t3</span>
+                <span>pr0c0der</span>
+                <span>h4x0r</span>
               </div>
             </div>
-            <button class="register hide">Join Tournament</button>
-            <button class="results-btn">See Results</button>
-            <span class="joined-notice">You have joined this tournament!</span>
-          </div>
-          <div class="notes column">
-            <h2 class="header-obj">Objectives</h2>
-            <ul class="objectives">
-              <li>Desktop/Mobile Nav Bar/Menu</li>
-              <li>Slider with at least 3 slides</li>
-              <li>3 column list of at least 9 dynamically generated products</li>
-              <li>At least one parallax effect</li>
-              <li>Footer with animated text</li>
-            </ul>
-            <h2 class="header-rules">Rules</h2>
-            <ul class="rules">
-              <li>Desktop/Mobile Nav Bar/Menu</li>
-              <li>Slider with at least 3 slides</li>
-              <li>3 column list of at least 9 dynamically generated products</li>
-              <li>At least one parallax effect</li>
-              <li>Footer with animated text</li>
-            </ul>
+            <p class="bracket-note">*Players will be randomly placed in the bracket</p>
           </div>
         </div>
-      </div>
-      <!-- End Details -->
-
-      <!-- Begin Results @JD-->
-      <div class="results column y-center ">
-        <div class="wrap column">
-          <div class="header column">
-            <h2 class="title">Build a Web Application with Node/React</h2>
-            <h3 class="final-text">Final Results</h3>
-            <div class="about row split top">
-              <div class="column">
-                <span class="category">Random Team Match</span>
-                <span class="date">January 12th, 2017</span>
-
-              </div>
-              <div class="column">
-                <span class="players">Players: 6</span>
-                <span class="stack">HTML/CSS/JS</span>
-              </div>
+        <!-- End Bracket Display -->
+        <div class="admin-panel row">
+          <i class="fa fa-edit"></i>
+        </div>
+        <div class="info column">
+          <h2 class="title">Build a Web Application with Node/React</h2>
+          <div class="row x-center y-center stream-alert">
+            <h3>*Tournament is live!</h3>
+            <div class="view-details row y-center">
+              <i class="fa fa-external-link"></i>
+              <span>Watch Now!</span>
             </div>
-            <nav class="tabs column y-center">
-              <ul class="row x-center">
-                <li class="active">Overall</li>
-                <li>Objectives</li>
-                <li>Voting</li>
-                <li>Players</li>
-              </ul>
-            </nav>
           </div>
-          
-          <div class="results-display row">
-            
+          <div class="about column">
+            <h3 class="category">Random Team Match</h3>
+            <div class="when row split">
+              <span class="date">January 12th, 2017</span>
+              <span class="time">3:30PM</span>
+            </div>
+            <div class="type row split bottom">
+              <span class="players">Registered Players: 3</span>
+              <span class="stack">HTML/CSS/JS</span>
+            </div>
+            <button id="view-bracket">View Bracket</button>
+          </div>
+          <button class="register">Join Tournament</button>
+          <button class="results-btn hide">See Results</button>
+          <span class="joined-notice">You have joined this tournament!</span>
+        </div>
+        <div class="notes column">
+          <h2 class="header-obj">Recommended Skills</h2>
+          <ul class="recommended">
+            <li>A good understanding of events in JS</li>
+            <li>Using flexbox to layout content</li>
+            <li>Know how to create dynamic data with JS</li>
+            <li>A basic understanding of parallax</li>
+            <li>CSS animations</li>
+          </ul>
+          <h2 class="header-rules">Rules</h2>
+          <ul class="rules">
+            <li>No frameworks/libraries allowed other than jQuery</li>
+            <li>No copy/pasting of code</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- End Details -->
+
+    <!-- Begin Results @JD-->
+    <div class="results column y-center hide">
+      <div class="wrap column">
+        <div class="header column">
+          <h2 class="title">Build a Web Application with Node/React</h2>
+          <h3 class="final-text">Final Results</h3>
+          <div class="about row split top">
+            <div class="column">
+              <span class="category">Random Team Match</span>
+              <span class="date">January 12th, 2017</span>
+
+            </div>
+            <div class="column">
+              <span class="players">Players: 6</span>
+              <span class="stack">HTML/CSS/JS</span>
+            </div>
+          </div>
+          <nav class="tabs column y-center">
+            <ul class="row x-center">
+              <li class="active">Overall</li>
+              <li>Objectives</li>
+              <li>Voting</li>
+              <li>Points</li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="results-display row">
+
           <!-- Begin Blue Team Content -->
-            <div class="column y-center team-blue">
-              <h2 class="header-blue">thelongnameteam<span class="win-text">Win</span><span class="team-points"><span>+</span>100 SP</span></h2>
-              <div class="list column">
-                <!-- Begin Overall View -->
-                <div class="overall-view column">
-                  <table class="results-table">
-                    <thead>
-                      <tr>
-                        <th></th>
-                        <th class="border-right-none">Points</th>
-                      </tr>
-                    </thead>
+          <div class="column y-center team-blue">
+            <h2 class="header-blue">thelongnameteam<span class="win-text">Win</span><span class="team-points"><span>+</span>100 SP</span></h2>
+            <div class="list column">
+              <!-- Begin Overall View -->
+              <div class="overall-view column">
+                <table class="results-table">
+                  <thead>
                     <tr>
-                      <th>Objectives</th>
-                      <td>4</td>
+                      <th></th>
+                      <th class="border-right-none">Points</th>
                     </tr>
-                    <tr>
-                      <th>Design</th>
-                      <td>1</td>
-                    </tr>
-                    <tr>
-                      <th>Functionality</th>
-                      <td>1</td>
-                    </tr>
-                    <tr>
-                      <th class="total-text">Total</th>
-                      <td class="total-amount"><span>6</span></td>
-                    </tr>
-                  </table>
-                </div>
-                <!-- End Overall View -->
-                
-                <!--Begin Objectives View -->
-                <div class="objectives-view column hide">
-                  <ul class="rules">
-                    <li class="active">Desktop/Mobile Nav Bar/Menu</li>
-                    <li class="active">Slider with at least 3 slides</li>
-                    <li>3 column list of at least 9 dynamically generated products</li>
-                    <li class="active">At least one parallax effect</li>
-                    <li class="active">Footer with animated text</li>
-                  </ul>
-                  <div class="total-wrap row x-center y-center">
-                    <h3 class="total-text">Objectives Completed</h3>
-                    <span class="objective-amount">4</span>
-                  </div>
-                </div>
-                <!-- End Objectives View -->
-                
-                <!-- Begin Voting View -->
-                <div class="voting-view column hide">
-                  <table class="results-table">
-                    <thead>
-                      <tr>
-                        <th></th>
-                        <th class="border-right-none">Votes</th>
-                      </tr>
-                    </thead>
-                    <tr>
-                      <th>Design</th>
-                      <td>22</td>
-                    </tr>
-                    <tr>
-                      <th>Functionality</th>
-                      <td>18</td>
-                    </tr>
-                    <tr>
-                      <th class="total-text">Total</th>
-                      <td class="total-amount"><span>40</span></td>
-                    </tr>
-                  </table>
-                </div>
-                <!-- End Voting View-->
-                
-                <!-- Begin Players View -->
-                <div class="players-view column hide">
-                  <table class="results-table">
-                    <thead>
-                      <tr>
-                        <th>Players</th>
-                        <th>Skill Points</th>
-                      </tr>
-                    </thead>
-                    <tr>
-                      <th>xpertCoder<span class="player-role">HTML</span></th>
-                      <td class="skill-points"><span class="plus">+</span>100 SP</td>
-                    </tr>
-                    <tr>
-                      <th>neo<span class="player-role">CSS</span></th>
-                      <td class="skill-points"><span class="plus">+</span>100 SP</td>
-                    </tr>
-                    <tr>
-                      <th>l33t<span class="player-role">JS</span></th>
-                      <td class="skill-points"><span class="plus">+</span>100 SP</td>
-                    </tr>
-                  </table>
-                </div>
-                <!-- End Players View -->
-                
+                  </thead>
+                  <tr>
+                    <th>Objectives</th>
+                    <td>4</td>
+                  </tr>
+                  <tr>
+                    <th>Design</th>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <th>Functionality</th>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <th class="total-text">Total</th>
+                    <td class="total-amount"><span>6</span></td>
+                  </tr>
+                </table>
               </div>
-            </div>
-            <!-- End Blue Team Content -->
-            
-            <!-- Begin Red Team Content-->
-            <div class="column y-center team-red">
-              <h2 class="header-red">weSux<span class="lose-text">Lose</span><span class="team-points lose"><span>+</span>25 SP</span></h2>
-              <div class="list column">
-                
-                <!-- Begin Overall View -->
-                <div class="overall-view column">
-                  <table class="results-table">
-                    <thead>
-                      <tr>
-                        <th></th>
-                        <th class="border-right-none">Points</th>
-                      </tr>
-                    </thead>
-                    <tr>
-                      <th>Objectives</th>
-                      <td>3</td>
-                    </tr>
-                    <tr>
-                      <th>Design</th>
-                      <td>0</td>
-                    </tr>
-                    <tr>
-                      <th>Functionality</th>
-                      <td>0</td>
-                    </tr>
-                    <tr>
-                      <th class="total-text">Total</th>
-                      <td class="total-amount"><span>3</span></td>
-                    </tr>
-                  </table>
+              <!-- End Overall View -->
+
+              <!--Begin Objectives View -->
+              <div class="objectives-view column hide">
+                <ul class="rules">
+                  <li class="active">Desktop/Mobile Nav Bar/Menu</li>
+                  <li class="active">Slider with at least 3 slides</li>
+                  <li>3 column list of at least 9 dynamically generated products</li>
+                  <li class="active">At least one parallax effect</li>
+                  <li class="active">Footer with animated text</li>
+                </ul>
+                <div class="total-wrap row x-center y-center">
+                  <h3 class="total-text">Objectives Completed</h3>
+                  <span class="objective-amount">4</span>
                 </div>
-                <!-- End Overall View -->
-                
-                <!-- Begin Objectives View -->
-                <div class="column objectives-view hide">
-                  <ul class="rules">
-                    <li>Desktop/Mobile Nav Bar/Menu</li>
-                    <li class="active">Slider with at least 3 slides</li>
-                    <li class="active">3 column list of at least 9 dynamically generated products</li>
-                    <li class="active">At least one parallax effect</li>
-                    <li>Footer with animated text</li>
-                  </ul>
-                  <div class="total-wrap row x-center y-center">
-                    <h3 class="total-text">Objectives Completed</h3>
-                    <span class="objective-amount lose">3</span>
-                  </div>
-                </div>
-                
-                <!-- Begin Voting View -->
-                <div class="voting-view column hide">
-                  <table class="results-table">
-                    <thead>
-                      <tr>
-                        <th></th>
-                        <th>Votes</th>
-                      </tr>
-                    </thead>
-                    <tr>
-                      <th>Design</th>
-                      <td>15</td>
-                    </tr>
-                    <tr>
-                      <th>Functionality</th>
-                      <td>10</td>
-                    </tr>
-                    <tr>
-                      <th class="total-text">Total</th>
-                      <td class="total-amount"><span>25</span></td>
-                    </tr>
-                  </table>
-                </div>
-                <!-- End Voting View-->
-                
-                <!-- Begin Players View -->
-                <div class="players-view column hide">
-                  <table class="results-table">
-                    <thead>
-                      <tr>
-                        <th>Players</th>
-                        <th>Skill Points</th>
-                      </tr>
-                    </thead>
-                    <tr>
-                      <th>xpertCoder<span class="player-role">HTML</span></th>
-                      <td class="skill-points lose"><span class="plus">+</span>25 SP</td>
-                    </tr>
-                    <tr>
-                      <th>neo<span class="player-role">CSS</span></th>
-                      <td class="skill-points lose"><span class="plus">+</span>25 SP</td>
-                    </tr>
-                    <tr>
-                      <th>l33t<span class="player-role">JS</span></th>
-                      <td class="skill-points lose"><span class="plus">+</span>25 SP</td>
-                    </tr>
-                  </table>
-                </div>
-                <!-- End Players View -->
-                
               </div>
+              <!-- End Objectives View -->
+
+              <!-- Begin Voting View -->
+              <div class="voting-view column hide">
+                <table class="results-table">
+                  <thead>
+                    <tr>
+                      <th></th>
+                      <th class="border-right-none">Votes</th>
+                    </tr>
+                  </thead>
+                  <tr>
+                    <th>Design</th>
+                    <td>22</td>
+                  </tr>
+                  <tr>
+                    <th>Functionality</th>
+                    <td>18</td>
+                  </tr>
+                  <tr>
+                    <th class="total-text">Total</th>
+                    <td class="total-amount"><span>40</span></td>
+                  </tr>
+                </table>
+              </div>
+              <!-- End Voting View-->
+
+              <!-- Begin Points View -->
+              <div class="points-view column hide">
+                <table class="results-table">
+                  <thead>
+                    <tr>
+                      <th>Players</th>
+                      <th>Skill Points</th>
+                    </tr>
+                  </thead>
+                  <tr>
+                    <th>xpertCoder<span class="player-role">HTML</span></th>
+                    <td class="skill-points"><span class="plus">+</span>100 SP</td>
+                  </tr>
+                  <tr>
+                    <th>neo<span class="player-role">CSS</span></th>
+                    <td class="skill-points"><span class="plus">+</span>100 SP</td>
+                  </tr>
+                  <tr>
+                    <th>l33t<span class="player-role">JS</span></th>
+                    <td class="skill-points"><span class="plus">+</span>100 SP</td>
+                  </tr>
+                </table>
+              </div>
+              <!-- End Players View -->
+
             </div>
-            <!-- End Red Team Content -->
-            
           </div>
+          <!-- End Blue Team Content -->
+
+          <!-- Begin Red Team Content-->
+          <div class="column y-center team-red">
+            <h2 class="header-red">weSux<span class="lose-text">Lose</span><span class="team-points lose"><span>+</span>25 SP</span></h2>
+            <div class="list column">
+
+              <!-- Begin Overall View -->
+              <div class="overall-view column">
+                <table class="results-table">
+                  <thead>
+                    <tr>
+                      <th></th>
+                      <th class="border-right-none">Points</th>
+                    </tr>
+                  </thead>
+                  <tr>
+                    <th>Objectives</th>
+                    <td>3</td>
+                  </tr>
+                  <tr>
+                    <th>Design</th>
+                    <td>0</td>
+                  </tr>
+                  <tr>
+                    <th>Functionality</th>
+                    <td>0</td>
+                  </tr>
+                  <tr>
+                    <th class="total-text">Total</th>
+                    <td class="total-amount"><span>3</span></td>
+                  </tr>
+                </table>
+              </div>
+              <!-- End Overall View -->
+
+              <!-- Begin Objectives View -->
+              <div class="column objectives-view hide">
+                <ul class="rules">
+                  <li>Desktop/Mobile Nav Bar/Menu</li>
+                  <li class="active">Slider with at least 3 slides</li>
+                  <li class="active">3 column list of at least 9 dynamically generated products</li>
+                  <li class="active">At least one parallax effect</li>
+                  <li>Footer with animated text</li>
+                </ul>
+                <div class="total-wrap row x-center y-center">
+                  <h3 class="total-text">Objectives Completed</h3>
+                  <span class="objective-amount lose">3</span>
+                </div>
+              </div>
+
+              <!-- Begin Voting View -->
+              <div class="voting-view column hide">
+                <table class="results-table">
+                  <thead>
+                    <tr>
+                      <th></th>
+                      <th>Votes</th>
+                    </tr>
+                  </thead>
+                  <tr>
+                    <th>Design</th>
+                    <td>15</td>
+                  </tr>
+                  <tr>
+                    <th>Functionality</th>
+                    <td>10</td>
+                  </tr>
+                  <tr>
+                    <th class="total-text">Total</th>
+                    <td class="total-amount"><span>25</span></td>
+                  </tr>
+                </table>
+              </div>
+              <!-- End Voting View-->
+
+              <!-- Begin Points View -->
+              <div class="points-view column hide">
+                <table class="results-table">
+                  <thead>
+                    <tr>
+                      <th>Players</th>
+                      <th>Skill Points</th>
+                    </tr>
+                  </thead>
+                  <tr>
+                    <th>xpertCoder<span class="player-role">HTML</span></th>
+                    <td class="skill-points lose"><span class="plus">+</span>25 SP</td>
+                  </tr>
+                  <tr>
+                    <th>neo<span class="player-role">CSS</span></th>
+                    <td class="skill-points lose"><span class="plus">+</span>25 SP</td>
+                  </tr>
+                  <tr>
+                    <th>l33t<span class="player-role">JS</span></th>
+                    <td class="skill-points lose"><span class="plus">+</span>25 SP</td>
+                  </tr>
+                </table>
+              </div>
+              <!-- End Players View -->
+
+            </div>
+          </div>
+          <!-- End Red Team Content -->
+
         </div>
       </div>
-      <!-- End Results-->
+    </div>
+    <!-- End Results-->
 
-      <!-- Begin Live Stream Display -->
-      <div class="live column" style="background-image: url(https://hd.unsplash.com/photo-1461749280684-dccba630e2f6);">
-        <h2 class="live-header">Live Tournament</h2>
-        <a href="#" class="view-now"><i class="fa fa-external-link"></i>View Now!</a>
-        <span class="indicator"></span>
-        <div class="bg-overlay"></div>
-        <div class="info column split">
-          <h2 class="title">Build a Web App</h1>
-            <div class="about-wrap column x-center">
-              <div class="row about">
-                <span class="type">6 Players</span>
-                <span class="category">Team Match</span>
-                <span class="stack">HTML/CSS/JS</span>
-              </div>
-              <span class="started">Started: 29 minutes ago</span>
+    <!-- Begin Live Stream Display -->
+    <div class="live column" style="background-image: url(https://hd.unsplash.com/photo-1461749280684-dccba630e2f6);">
+      <h2 class="live-header">Live Tournament</h2>
+      <a href="#" class="view-now"><i class="fa fa-external-link"></i>View Now!</a>
+      <span class="indicator"></span>
+      <div class="bg-overlay"></div>
+      <div class="info column split">
+        <h2 class="title">Build a Web App</h1>
+          <div class="about-wrap column x-center">
+            <div class="row about">
+              <span class="type">6 Players</span>
+              <span class="category">Team Match</span>
+              <span class="stack">HTML/CSS/JS</span>
             </div>
+            <span class="started">Started: 29 minutes ago</span>
+          </div>
         </div>
         <button class="details-btn">View Details</button>
       </div>
       <!-- End Live Stream Display -->
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     <div id="upcoming" class="listing-wrap column">
       <div class="listings row x-center">

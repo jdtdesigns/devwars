@@ -35,8 +35,148 @@
     min-height: 100vh;
     padding: 100px 0 25px 210px;
     border-radius: 1px;
-    &>div {
+    .details-content {
       position: relative;
+      min-height: 500px;
+      // Begin Bracket Display
+      .bracket-display {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 800;
+        width: 100%;
+        height: 100%;
+        padding: 25px 0;
+        background: rgba(38, 38, 38, .9);
+        .bracket-header {
+          color: #ddd;
+          margin-bottom: 20px;
+          font-weight: 300;
+          transform: $skew;
+        }
+        .bracket-wrap {
+          width: 88%;
+          height: 302px;
+          position: relative;
+          font-weight: 300;
+          & > div {
+            width: 33.333%;
+            text-align: center;
+            .team-header {
+              margin-bottom: 20px;
+              font-weight: 400;
+            }
+            .player-wrap {
+              width: 100%;
+              border-radius: 2px;
+              padding: 10px;
+              span {
+                padding: 15px 0;
+                width: 100%;
+                border-radius: 2px;
+                font-size: 1.1em;
+                background: #333;
+                position: relative;
+                border: 2px solid #777;
+                &:not(:last-child) {
+                  margin-bottom: 20px;
+                  &:after {
+                    content: '';
+                    position: absolute;
+                    height: 22px;
+                    width: 2px;
+                    background: #777;
+                    bottom: -22px;
+                    left: 0;
+                    right: 0;
+                    margin: 0 auto;
+                  }
+                }
+              }
+            }
+          }
+          .bracket-blue {
+            left: 0;
+            color: $blue;
+            &:before {
+              right: -24px;
+            }
+            span {
+              &:after {
+                right: -30px;
+              }
+            }
+          }
+          .bracket-red {
+            right: 0;
+            color: $red;
+            &:before {
+              left: -24px;
+            }
+            span {
+              &:after {
+                left: -30px;
+              }
+            }
+          }
+          .bracket-winner {
+            margin: 0 auto;
+            font-size: 1.2em;
+            &:before {
+              display: none;
+            }
+            span:not(.winner-header) {
+              border: 2px solid #777;
+              background: #333;
+              margin-top: 26px;
+              width: 80%;
+              padding: 14px 0 17px;
+              border-radius: 2px;
+              position: relative;
+              &:before, &:after {
+                content: '';
+                position: absolute;
+                background: #777;
+                height: 2px;
+                top: 26px;
+                width: 37px;
+              }
+              &:before {
+                left: -37px;
+              }
+              &:after {
+                right: -37px;
+              }
+              &.blue {
+                color: $blue;
+              }
+              &.red {
+                color: $red;
+              }
+            }
+            .winner-header {
+              color: #aaa;
+              font-family: 'Lato', sans-serif;
+              font-size: 1.4em;
+              font-weight: 300;
+              transform: $skew;
+              position: relative;
+              bottom: -12px;
+            }
+          }
+        }
+        .bracket-note {
+          position: absolute;
+          bottom: -20px;
+          left: 0;
+          right: 0;
+          margin: 0;
+          text-align: center;
+          color: $orange;
+          font-size: 1.1em;
+        }
+      }
+      // End Bracket Display
       .admin-panel {
         position: absolute;
         top: 10px;
@@ -96,7 +236,7 @@
       }
       .about {
         background: #333;
-        padding: 12px 25px 25px;
+        padding: 12px 25px 15px;
         .category {
           margin-bottom: 10px;
           text-align: center;
@@ -120,13 +260,27 @@
           }
         }
         .type {
-          .players {
+          .points {
             font-size: .88em;
           }
           .stack {
             color: $green;
             font-size: .89em;
           }
+        }
+      }
+      #view-bracket {
+        background: #4b4b4b;
+        color: #dfdfdf;
+        padding: 2px 8px 5px; 
+        font-size: .95em;
+        margin: 15px auto 0;
+        border-radius: 1px;
+        &:hover {
+          background: darken(#4b4b4b, 1%);
+        }
+        &:active {
+          background: darken(#4b4b4b, 2%);
         }
       }
     }
@@ -147,7 +301,7 @@
           color: lighten(#ea3d12, 3%);
         }
       }
-      .objectives,
+      .recommended,
       .rules {
         padding: 0 15px;
         li {
@@ -160,28 +314,22 @@
             content: '';
             position: absolute;
             left: 13px;
-            top: 5px;
-            width: 10px;
-            height: 10px;
+            top: 6px;
+            width: 12px;
+            height: 12px;
           }
         }
       }
-      .objectives {
+      .recommended {
         margin-bottom: 20px;
-        li.active:before {
-          background: darken($blue, 2%);
-        }
         li:before {
-          border: 2px solid darken($blue, 2%);
+          background: darken($blue, 2%);
         }
       }
       .rules {
         padding-bottom: 30px;
-        li.active:before {
-          background: lighten(#ea3d12, 3%);
-        }
         li:before {
-          border: 2px solid lighten(#ea3d12, 3%);
+          background: lighten(#ea3d12, 3%);
         }
       }
     }
@@ -284,7 +432,7 @@
             transform: scaleY(.95);
             line-height: .9;
           }
-          .players {
+          .points {
             margin-bottom: 3px;
           }
           .stack {
@@ -462,7 +610,7 @@
               }
             }
           }
-          .players-view {
+          .points-view {
             th {
               padding: 10px 10px 12px;
               .player-role {
@@ -491,7 +639,7 @@
               }
               &.skill-points {
                 color: darken($green, 3%);
-                font-size: 1.05em;
+                font-size: 1em;
                 .plus {
                   font-size: 1.3em;
                   line-height: .8;
@@ -533,7 +681,7 @@
               }
             }
           }
-          .players-view {
+          .points-view {
             .player-role {
               color: lighten($blue, 3%);
             }
@@ -563,7 +711,7 @@
               }
             }
           }
-          .players-view {
+          .points-view {
             .player-role {
               color: lighten($red, 3%);
             }

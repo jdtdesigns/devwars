@@ -65,13 +65,8 @@ body.light {
 }
 
 .logo {
-  // slant the text and lower the vertical scale
-  transform: skewX(-10deg) scaleY(0.95);
-  color: #fff;
-  font-size: 1.6em;
-  padding: 7px 0;
-  span {
-    color: #69e200;
+  svg {
+    width: 170px;
   }
 }
 
